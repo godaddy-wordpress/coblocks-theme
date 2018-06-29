@@ -1,0 +1,135 @@
+.site-header {
+	@include clearfix;
+	margin: 0 auto;
+	padding: 15px 0;
+
+	@media only screen and (max-width: 599px) {
+
+		&::after {
+			content: "";
+			display: none;
+			position: fixed;
+			z-index: 99999999;
+			top: 100px;
+			right: 0;
+			left: 0;
+			height: 40px;
+			width: 100%;
+			background: transparent;
+			background: linear-gradient($white 0%, rgba($white, 0));
+			pointer-events: none;
+		}
+	}
+
+	&__button {
+		padding: 5px;
+
+		.icon {
+			backface-visibility: hidden;
+			fill: $black;
+			position: relative;
+
+			@include hover {
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+
+			&-night {
+				height: 30px;
+				top: 0.06em;
+				width: 30px;
+			}
+		}
+	}
+
+	.site-logo {
+
+		&.no-border-radius img {
+			border-radius: 0;
+		}
+
+		img {
+			border-radius: 100%;
+			transition: transform .3s cubic-bezier(.694,.0482,.335,1), box-shadow 300ms cubic-bezier(0.694, 0.0482, 0.335, 1), border-radius .2s cubic-bezier(.694,.0482,.335,1);
+		}
+	}
+
+	.sep {
+		height: 24px;
+		display: inline-block;
+		position: relative;
+		padding-left: 7px;
+		margin-left: 20px;
+		border-left: 1px solid rgba(0, 0, 0, .15);
+		transition: all 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+		@media only screen and (max-width: 299px) {
+			display: none;
+		}
+	}
+
+	.site-description {
+		@include font-size(18px);
+		line-height: 1;
+		display: none;
+	}
+
+	.nav {
+
+		div {
+			display: inline-block;
+			margin-right: 20px;
+		}
+
+		li {
+			position: relative;
+			text-align: right;
+
+			@media only screen and (min-width: 600px) {
+				display: inline-block;
+				text-align: left;
+			}
+
+			a {
+				display: inline-block;
+				transition: opacity 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+				@media only screen and (min-width: 600px) {
+					padding: .25em .6em;
+				}
+
+				@media only screen and (min-width: 600px) and (max-width: 700px) {
+					@include font-size(16px);
+					padding: .25em .4em;
+				}
+
+				@include hover {
+					&:hover {
+						opacity: .7;
+					}
+				}
+			}
+
+			&.current_page_item > a {
+				opacity: .7;
+			}
+
+			&.current_page_item .icon {
+				opacity: .7;
+			}
+		}
+
+		.sep {
+			padding-left: 0;
+			margin-left: -5px;
+			margin-right: 14px;
+			display: none;
+
+			@media only screen and (min-width: 600px) {
+				display: inline-block;
+			}
+		}
+	}
+}

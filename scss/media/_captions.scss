@@ -1,0 +1,110 @@
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	text-align: center;
+
+	img[class*="wp-image-"] {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.wp-caption-text {
+	@include font-size(12px);
+	color: $gray;
+	font-family: $font__heading;
+	line-height: 1.5;
+	margin-top: 15px;
+	margin-bottom: 30px;
+
+	@media (min-width: 600px) {
+		@include font-size(13px);
+		margin-bottom: 40px;
+	}
+
+	.alignleft &,
+	.alignright & {
+		margin-bottom: 0;
+	}
+}
+
+// Captions
+.wp-block-image,
+.wp-block-gallery .blocks-gallery-item {
+
+	figcaption {
+		@extend .gray;
+		@extend .extra-small;
+		@extend .sans-serif-font;
+		background: transparent;
+		margin-bottom: -0.3em;
+		margin-top: 0.85em;
+
+		a:hover {
+			color: $black;
+		}
+	}
+
+	&.aligncenter figcaption,
+	&.alignfull figcaption {
+		margin-bottom: -0.5em;
+
+		@media (min-width: 600px) {
+			margin-bottom: -0.8em;
+		}
+	}
+
+}
+
+.wp-block-gallery {
+
+	.blocks-gallery-item {
+
+		figcaption {
+			background: rgba($white, 0.7);
+			padding-top: 0.6em;
+			padding-bottom: 0.5em;
+			bottom: 4px;
+		}
+
+		// Position captions better for galleries with just one image.
+		&:nth-child(1):last-child {
+
+			figcaption {
+				bottom: -34px;
+			}
+
+			.has-caption {
+				position: relative;
+				margin-bottom: 1.7rem;
+
+				@media (min-width: 600px) {
+					margin-bottom: 1.3rem;
+				}
+			}
+		}
+	}
+
+	&.columns-1 .blocks-gallery-item {
+
+		figcaption {
+			background: $white;
+		}
+
+		&:not(:last-child) {
+
+			figcaption {
+				padding-top: 0.75em;
+				padding-bottom: 1.5rem;
+			}
+		}
+
+		&:last-child {
+
+			figcaption {
+				padding-bottom: 0;
+				margin-bottom: -0.25rem;
+			}
+		}
+	}
+}

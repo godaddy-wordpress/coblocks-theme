@@ -1,0 +1,72 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	// Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+	box-sizing: inherit;
+}
+
+body {
+	background: $color--background-body; // Fallback for when there is no custom background color defined.
+
+	&.custom-background.nav-open {
+		// Hide the background image when the mobile navigation is open, because we don't want to blur the whole body.
+		background-image: none;
+	}
+}
+
+hr {
+	background-color: $black;
+	opacity: .1;
+	border: 0;
+	height: 1px;
+	margin: 0 0 1.5em;
+
+	@media (min-width: 600px) {
+		margin: 0 0 1.85em;
+	}
+
+	&.wp-block-separator {
+		background: none;
+	}
+}
+
+@import "lists";
+
+img {
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
+	vertical-align: middle;
+}
+
+@import "tables";
+
+@-ms-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+/*--------------------------------------------------------------
+#  Buttons
+--------------------------------------------------------------*/
+@import "buttons";
+
+/*--------------------------------------------------------------
+# Fields
+--------------------------------------------------------------*/
+@import "fields";
+
+.wp-activate-container {
+	@include structure;
+	text-align: center;
+
+	h2 {
+		margin-bottom: .3em;
+	}
+}

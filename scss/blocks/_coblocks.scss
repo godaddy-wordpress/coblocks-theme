@@ -1,0 +1,52 @@
+.wp-block-coblocks-alert,
+.wp-block-coblocks-accordion {
+	margin: 0 0 1.5em;
+
+	@media (min-width: 600px) {
+		margin: 0 0 1.8em;
+	}
+}
+
+.wp-block-coblocks-click-to-tweet__twitter-btn {
+	@extend .sans-serif-font;
+	@include font-size(16px);
+	height: 40px;
+	font-weight: 500;
+	line-height: 42px;
+	padding-left: 0.9em;
+	padding-right: 0.9em;
+}
+
+.wp-block-coblocks-click-to-tweet__text::before {
+	top: 10px;
+}
+
+.wp-block-coblocks-author {
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+
+	@media (min-width: 760px) {
+		max-width: 720px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
+
+.wp-block-coblocks-author__content-heading p {
+	margin-bottom: 0;
+	@extend .small;
+	@extend .medium;
+	@extend .sans-serif-font;
+	@extend .gray;
+}
+
+.wp-block-coblocks-author__content-name h3 {
+	margin-bottom: 14px;
+	margin-top: 14px;
+	padding: 0;
+}
+
+.wp-block-coblocks-author__content-button {
+	@extend .button;
+	padding-bottom: 0.43em;
+}

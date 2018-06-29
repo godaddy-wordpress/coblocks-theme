@@ -1,0 +1,9 @@
+.site-content {
+	overflow: hidden;
+	z-index: 2;
+	padding-top: 3em;
+
+	@media only screen and (min-width: 700px) {
+		padding-top: 4em;
+	}
+}

@@ -1,0 +1,62 @@
+.entry-content {
+
+	> *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
+		max-width: $content_width;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: $content_padding;
+		padding-right: $content_padding;
+	}
+
+	> [class*="wp-block"]:not(.wp-block-image):not(.wp-block-gallery):not(.wp-block-writy-ad):not(.wp-block-quote):not(.alignleft):not(.alignright) {
+		margin-bottom: 20px;
+
+		@media (min-width: 600px) {
+			margin-bottom: 27px;
+		}
+	}
+
+	> [id*="more"] {
+		display: none;
+	}
+
+	@include headings {
+		margin-top: 35px;
+		margin-bottom: 12px;
+
+		@media (min-width: 600px) {
+			margin-top: 60px;
+		}
+	}
+
+	.wp-block-button__link {
+		box-shadow: none !important;
+	}
+}
+
+@import "cover-image";
+@import "dynamic-separator";
+@import "image-and-gallery";
+@import "paragraph";
+@import "pullquote";
+@import "quote";
+@import "separator";
+@import "subhead";
+@import "gallery";
+@import "embed";
+@import "audio";
+
+/*--------------------------------------------------------------
+## Custom Color Palette
+--------------------------------------------------------------*/
+@import "blocks/color-palette";
+
+/*--------------------------------------------------------------
+## Block Alignments
+--------------------------------------------------------------*/
+@import "blocks/alignments";
+
+/*--------------------------------------------------------------
+## CoBlocks
+--------------------------------------------------------------*/
+@import "blocks/coblocks";

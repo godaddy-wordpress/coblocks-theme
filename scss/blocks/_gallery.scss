@@ -1,0 +1,111 @@
+ul.wp-block-gallery {
+	padding-left: 5px;
+	margin-left: inherit;
+
+	li {
+		padding-left: 0;
+	}
+
+	@media (max-width: 599px) {
+		margin-left: -8px !important;
+		margin-right: -8px !important;
+	}
+
+	li:before {
+		display: none;
+	}
+
+	&:not(.components-placeholder):not(.alignfull) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.alignfull {
+		padding-left: 0;
+		padding-right: 0;
+
+		li:first-child:last-child {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	a {
+		box-shadow: none !important;
+	}
+
+	@media (min-width: 600px) {
+
+		li {
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&.columns-1 {
+
+			li {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		&.columns-2 {
+
+			li {
+
+				&:nth-child(even) {
+					margin-right: 0;
+				}
+
+				&:nth-child(odd) {
+					margin-left: 0;
+				}
+			}
+		}
+
+		&.columns-3 {
+
+			li {
+
+				&:nth-child(3) {
+					margin-right: 0;
+				}
+
+				&:nth-child(4) {
+					margin-left: 0;
+
+					&:last-child {
+						margin-right: 0;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		&.columns-4 {
+
+			li {
+
+				&:nth-child(4) {
+					margin-right: 0;
+				}
+
+				&:nth-child(5) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.has-lightbox & img:hover {
+		cursor: zoom-in;
+	}
+}
+
+

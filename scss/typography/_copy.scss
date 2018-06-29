@@ -1,0 +1,189 @@
+em,
+cite {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+p {
+	margin: 0 0 1.5em;
+
+	@media (min-width: 600px) {
+		margin: 0 0 1.85em;
+	}
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote,
+.wp-block-quote {
+ 	@include font-size(25px);
+	border: none;
+	quotes: none;
+	font-style: italic;
+	line-height: 1.7;
+	font-weight: normal;
+	margin: 1.2em 0 1.2em .75em;
+	color: $gray;
+
+	@media (min-width: 600px) {
+		margin: 1.5em 0 1.5em 1.5em;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	cite {
+		@include font-size(18px);
+		display: block;
+		font-style: normal;
+		margin-top: .4em;
+		font-style: italic;
+	}
+
+	&.is-large {
+		margin-left: 0;
+		padding-left: 1em;
+		border-left: 3px solid $black;
+
+		p {
+			@include font-size(21px);
+			color: $gray;
+			line-height: 1.6;
+		}
+
+		cite {
+			@include font-size(16px);
+		 	text-align: left;
+		 	margin-top: .6em;
+		 	font-family: $font__main;
+		}
+	}
+}
+
+.entry-content {
+
+	.wp-block-pullquote {
+		@include font-size(25px);
+		border-color: $black;
+		border-width: 3px;
+		font-style: italic;
+		color: $black;
+		font-weight: normal;
+		line-height: 1.7;
+		margin: 2.2em 0 2.2em;
+		padding: 1.7em 0;
+
+		&.alignright {
+			@media (max-width: 599px) {
+				display: block;
+				float: none;
+				width: 100%;
+				max-width: none;
+			}
+
+			@media (min-width: 600px) {
+				margin-top: .4em;
+				margin-left: .7em;
+				margin-bottom: .4em;
+			}
+		}
+
+		&.alignleft {
+			@media (max-width: 599px) {
+				display: block;
+				float: none;
+				width: 100%;
+				max-width: none;
+			}
+
+			@media (min-width: 600px) {
+				margin-top: .4em;
+				margin-right: 1.3em;
+				margin-bottom: .4em;
+			}
+		}
+
+		p {
+			font-weight: normal;
+			margin-bottom: 0;
+		}
+
+		cite {
+			@include font-size(17px);
+		 	margin-top: .6em;
+		 	color: $gray;
+		 	text-transform: none;
+		 	font-weight: normal;
+		}
+	}
+}
+
+
+q {
+	quotes: "“" "”" "‘" "’";
+}
+
+address {
+	font-style: italic;
+	margin: 0 0 1.75em;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+	font: 17px/1.7 "Monaco", Courier, "Courier New", monospace;
+}
+
+pre {
+	background-color: $color--background-pre;
+	clear: both;
+	display: block;
+	font-size: 14px;
+	margin: 3.3em 0;
+	overflow: auto;
+	padding: 40px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+code {
+	@include font-size(15px);
+	padding: 3px 10px;
+	position: relative;
+	top: -1px;
+	border-radius: 3px;
+	background-color: $color--background-pre;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted $color--border-abbr;
+	cursor: help;
+}
+
+ins {
+	background: $color--background-ins;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+strike,
+del {
+	text-decoration: line-through;
+}

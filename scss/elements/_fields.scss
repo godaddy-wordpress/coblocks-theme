@@ -1,0 +1,92 @@
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	@include font-size(18px);
+	appearance: none;
+	background-color: $white;
+	border: 2px solid #dfdfdf;
+	box-shadow: none;
+	font-family: $font__heading;
+	border-radius: 5px;
+	font-weight: 400;
+	color: $color--text-input;
+	display: inline-block;
+	margin: 0 0 25px 0;
+	line-height: 1.7;
+	outline: none;
+	padding: 0.36em 0.95em 0.25em;
+	position: relative;
+	vertical-align: middle;
+	width: 100%;
+
+	&:focus {
+		border-color: $black;
+		outline: none;
+		color: $black;
+	}
+
+	.comments & {
+		font-family: $font__main;
+	}
+}
+
+textarea {
+	padding: 0.5em 0.95em;
+	min-height: 220px;
+}
+
+label {
+	@include font-size(16px);
+	@include font-smoothing();
+	@extend .sans-serif-font;
+	color: $gray;
+	display: block;
+	font-weight: 500;
+	margin-bottom: 2px;
+	z-index: 99;
+
+	@media only screen and (min-width: 600px) {
+		@include font-size(18px);
+	}
+}
+
+form p {
+	margin-bottom: 0;
+}
+
+::-webkit-input-placeholder {
+	color: $color--text-input-placeholder;
+
+	.js--focus & {
+		color: $color--text-input-placeholder;
+	}
+}
+
+:-moz-placeholder {
+	color: $color--text-input-placeholder;
+
+	.js--focus & {
+		color: $color--text-input-placeholder;
+	}
+}
+
+::-moz-placeholder {
+	color: $color--text-input-placeholder;
+	opacity: 1;
+
+	.js--focus & {
+		color: $color--text-input-placeholder;
+	}
+}
+
+:-ms-input-placeholder {
+	color: $color--text-input-placeholder;
+
+	.js--focus & {
+		color: $color--text-input-placeholder;
+	}
+}
