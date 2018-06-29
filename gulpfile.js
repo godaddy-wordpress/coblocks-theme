@@ -56,7 +56,6 @@ var themeBuildFiles		= './_dist/'+slug+'/**/*';
 
 // Build _demo contents.
 var demoDestination		= './_demo/';
-var sftpDemoFilesToUpload	= [ './_demo/**/*' ] ;
 
 // Browsers you care about for autoprefixing. https://github.com/ai/browserslist
 const AUTOPREFIXER_BROWSERS = [
@@ -96,7 +95,6 @@ var sort		= require('gulp-sort');
 var replace	  	= require('gulp-replace-task');
 var zip		  	= require('gulp-zip');
 var copy		= require('gulp-copy');
-var sftp	  	= require('gulp-sftp');
 var open	  	= require('gulp-open');
 var gulpif              = require('gulp-if');
 var cache               = require('gulp-cache');
@@ -330,18 +328,6 @@ gulp.task('zip-theme', function(done) {
 	done();
 });
 
-gulp.task( 'sftp-upload-to-theme-demo', function(done) {
-
-	return gulp.src( sftpDemoFilesToUpload )
-	.pipe( sftp( {
-		host: 'sftp.pressftp.com',
-		authFile: './inc/admin/.ftppass',
-		auth: 'DemoSFTP',
-		remotePath: '/wp-content/themes/' + slug
-	}))
-	done();
-});
-
 gulp.task( 'build_notice', function() {
 	return gulp.src( './' )
 	.pipe( notify( { message: 'Your build of ' + packageName + ' is complete.', onLast: false } ) );
@@ -368,7 +354,3 @@ gulp.task( 'build-process', gulp.series( 'clearCache', 'clean', 'clean_demo', 's
 gulp.task( 'build', gulp.series( 'build-process', 'build_notice', function(done) {
 	done();
 } ) );
-
-// gulp.task( 'release', gulp.series( 'build-process', 'sftp-upload-to-theme-demo', 'release_notice', function(done) {
-// 	done();
-// } ) );
