@@ -102,14 +102,17 @@ function coblocks_setup() {
 		'editor-color-palette',
 		array(
 			'name'  => esc_html__( 'Black', '@@textdomain' ),
+			'slug'  => 'black',
 			'color' => '#2a2a2a',
 		),
 		array(
 			'name'  => esc_html__( 'Gray', '@@textdomain' ),
+			'slug'  => 'gray',
 			'color' => '#727477',
 		),
 		array(
 			'name'  => esc_html__( 'Light Gray', '@@textdomain' ),
+			'slug'  => 'light-gray',
 			'color' => '#f8f8f8',
 		)
 	);
