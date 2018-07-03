@@ -23,6 +23,39 @@
 		} );
 	} );
 
+	wp.customize( 'custom_logo', function( value ) {
+		value.bind( function( to ) {
+
+			if ( to ) {
+				$( '.site-title' ).addClass( 'with-custom-logo' );
+			} else {
+				$( '.site-title' ).removeClass( 'with-custom-logo' );
+			}
+		} );
+	} );
+
+	wp.customize( 'site_title', function( value ) {
+		value.bind( function( to ) {
+
+			if ( true === to ) {
+
+				$( '.site-title' ).css({
+					clip: 'auto',
+					position: 'relative'
+				});
+
+				$( '.site-title' ).removeClass( 'screen-reader-text' );
+
+			} else {
+
+				$( '.site-title' ).css({
+					clip: 'rect(1px, 1px, 1px, 1px)',
+					position: 'absolute'
+				});
+			}
+		});
+	});
+
 	wp.customize( 'custom_logo_max_width', function( value ) {
 		value.bind( function( to ) {
 			var style, el;

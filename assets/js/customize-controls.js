@@ -47,6 +47,7 @@
 		customizer_image_option_display( 'custom_logo', 'custom_logo_max_width', 140 );
 		customizer_image_option_display( 'custom_logo', 'custom_logo_mobile_max_width', 140 );
 		customizer_image_option_display( 'custom_logo', 'custom_logo_border_radius', 140 );
+		customizer_image_option_display( 'custom_logo', 'site_title', 140 );
 	});
 
 } )( jQuery );

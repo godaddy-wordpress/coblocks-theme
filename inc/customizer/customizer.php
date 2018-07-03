@@ -151,6 +151,23 @@ function coblocks_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
+		'site_title', array(
+			'default'           => coblocks_defaults( 'site_title' ),
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'coblocks_sanitize_checkbox',
+		)
+	);
+
+	$wp_customize->add_control(
+		'site_title',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Display the Site Title and Logo', '@@textdomain' ),
+			'section' => 'title_tagline',
+		)
+	);
+
+	$wp_customize->add_setting(
 		'header_search', array(
 			'default'           => coblocks_defaults( 'header_search' ),
 			'transport'         => 'postMessage',

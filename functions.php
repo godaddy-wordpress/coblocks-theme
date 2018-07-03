@@ -374,8 +374,24 @@ function coblocks_pingback_header() {
 		echo '<link rel="pingback" href="', bloginfo( 'pingback_url' ), '">';
 	}
 }
-
 add_action( 'wp_head', 'coblocks_pingback_header' );
+
+/**
+ * Modify the logo class with Customizer values.
+ *
+ * @param string $html The logo html.
+ */
+function coblocks_site_logo_class( $html ) {
+
+	// Is the border radius option enabled?
+	$radius = get_theme_mod( 'custom_logo_border_radius', coblocks_defaults( 'custom_logo_border_radius' ) );
+	$radius = ( false === $radius ) ? ' no-border-radius' : null;
+
+	$html = str_replace( 'custom-logo-link', 'custom-logo-link site-logo ' . esc_attr( $radius ), $html );
+
+	return $html;
+}
+add_filter( 'get_custom_logo', 'coblocks_site_logo_class' );
 
 /**
  * Return a percentage.

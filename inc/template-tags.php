@@ -203,19 +203,16 @@ if ( ! function_exists( 'coblocks_site_logo' ) ) :
 	 */
 	function coblocks_site_logo() {
 
-		// Is the border radius option enabled?
-		$radius = get_theme_mod( 'custom_logo_border_radius', coblocks_defaults( 'custom_logo_border_radius' ) );
-		$radius = ( false === $radius ) ? ' no-border-radius' : null;
+		// Let's check to see if the option is enabled via the Customizer.
+		$site_title       = get_theme_mod( 'site_title', coblocks_defaults( 'site_title' ) );
+		$visibility       = ( false === $site_title ) ? ' screen-reader-text' : null;
+		$with_custom_logo = ( has_custom_logo() ) ? ' with-custom-logo' : null;
 
 		do_action( 'coblocks_before_site_logo' );
 
-		if ( has_custom_logo() ) {
-			echo '<div class="site-logo ' . esc_attr( $radius ) . ' " itemscope itemtype="http://schema.org/Organization">';
-				the_custom_logo();
-			echo '</div>';
-		} else {
-			printf( '<h1 class="h3 site-title" itemscope itemtype="http://schema.org/Organization"><a href="%1$s" rel="home" itemprop="url">%2$s</a></h1>', esc_url( home_url( '/' ) ), esc_html( get_bloginfo( 'name' ) ) );
-		}
+		the_custom_logo();
+
+		printf( '<h1 class="h3 site-title %1$s" itemscope itemtype="http://schema.org/Organization"><a href="%2$s" rel="home" itemprop="url" class="black">%3$s</a></h1>', esc_attr( $visibility . $with_custom_logo ), esc_url( home_url( '/' ) ), esc_html( get_bloginfo( 'name' ) ) );
 
 		do_action( 'coblocks_after_site_logo' );
 	}

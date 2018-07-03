@@ -21,6 +21,7 @@ function coblocks_defaults( $name ) {
 			'coblocks_defaults', array(
 
 				// Identity.
+				'site_title'                   => false,
 				'custom_logo_max_width'        => 50,
 				'custom_logo_mobile_max_width' => 50,
 				'custom_logo_border_radius'    => true,
