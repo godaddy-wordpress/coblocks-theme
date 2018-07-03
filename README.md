@@ -1,10 +1,11 @@
 # CoBlocks WordPress Theme
 
-[![WordPress theme](https://img.shields.io/wordpress/theme/dt/coblocks.svg?style=flat)](https://wordpress.org/themes/coblocks/) [![WordPress theme](https://img.shields.io/wordpress/theme/v/coblocks.svg?style=flat)](https://wordpress.org/themes/coblocks/) [![WordPress](https://img.shields.io/wordpress/v/theme.svg?style=flat)]() [![License](https://img.shields.io/badge/license-GPL--3.0%2B-red.svg)](https://github.com/richtabor/coblocks/blob/master/license.txt)
+[![WordPress theme](https://img.shields.io/wordpress/theme/dt/coblocks.svg)](https://wordpress.org/themes/coblocks/) [![License](https://img.shields.io/badge/license-GPL--3.0%2B-red.svg)](https://github.com/richtabor/coblocks/blob/master/license.txt)
 
 [![CoBlocks, an upcoming suite of Gutenberg Blocks for Content Marketers](https://user-images.githubusercontent.com/1813435/41249944-81eea564-6d83-11e8-87ef-9f87a2c8a077.jpg)](https://coblocks.com?utm_medium=coblocks-github&utm_source=readme&utm_campaign=readme&utm_content=banner)
 
-> 💥 WordPress → [Download the CoBlocks theme on WordPress.org](https://wordpress.org/themes/coblocks/).
+> 💥 WordPress theme → [Download the CoBlocks theme on WordPress.org](https://wordpress.org/themes/coblocks/).
+> > 💥 WordPress plugin → [Download the CoBlocks plugin on WordPress.org](https://wordpress.org/plugins/coblocks/).
 
 ## Installation ##
 
