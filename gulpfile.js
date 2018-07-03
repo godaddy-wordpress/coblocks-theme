@@ -333,9 +333,10 @@ gulp.task( 'build_notice', function() {
 	.pipe( notify( { message: 'Your build of ' + packageName + ' is complete.', onLast: false } ) );
 });
 
-gulp.task( 'release_notice', function() {
-	return gulp.src( './' )
-	.pipe( notify( { message: 'The v' + pkg.version + ' release of ' + packageName + ' has been uploaded.', onLast: true } ) )
+gulp.task( 'upload-to-wordpressorg', function(done){
+	gulp.src(__filename)
+	.pipe( open( { uri: 'https://wordpress.org/themes/upload/' } ) )
+	done();
 });
 
 gulp.task( 'default', gulp.series( 'clearCache', 'styles', 'gutenberg-styles', 'editor-styles', 'customizer-styles', 'browser-sync', function(done) {
@@ -347,7 +348,7 @@ gulp.task( 'default', gulp.series( 'clearCache', 'styles', 'gutenberg-styles', '
 	done();
 } ) );
 
-gulp.task( 'build-process', gulp.series( 'clearCache', 'clean', 'clean_demo', 'styles', 'css_variables', 'translate', 'gutenberg-styles', 'editor-styles', 'customizer-styles', 'copy', 'variables', 'clean_dist_customizer_scss', 'clean_dist_scss', 'zip-theme', 'move-to-demo', 'clean-dist', function(done) {
+gulp.task( 'build-process', gulp.series( 'clearCache', 'clean', 'clean_demo', 'styles', 'css_variables', 'translate', 'gutenberg-styles', 'editor-styles', 'customizer-styles', 'copy', 'variables', 'clean_dist_customizer_scss', 'clean_dist_scss', 'zip-theme', 'move-to-demo', 'clean-dist', 'upload-to-wordpressorg', function(done) {
 	done();
 } ) );
 
