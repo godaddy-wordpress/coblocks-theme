@@ -80,6 +80,9 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.1.1 =
+* New: Add Customizer option to display a site title along with the custom logo
+
 = 1.1.0 =
 * New: Gutenberg 3.0 support
 
