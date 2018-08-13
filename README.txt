@@ -80,6 +80,10 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.1.2 =
+* Fix: Update editor-color-palette for the latest Gutenberg release
+* Tweak: Add wide and full alignment styling for the CoBlocks Gif block
+
 = 1.1.1 =
 * New: Add Customizer option to display a site title along with the custom logo
 
