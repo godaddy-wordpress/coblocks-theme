@@ -29,8 +29,12 @@
 
 	</header>
 
+	<?php do_action( 'coblocks_before_content' ); ?>
+
 	<div class="entry-content entry-summary">
 		<?php the_excerpt(); ?>
 	</div>
+
+	<?php do_action( 'coblocks_after_content' ); ?>
 
 </article><!-- #post-## -->

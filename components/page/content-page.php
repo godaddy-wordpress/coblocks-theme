@@ -21,13 +21,19 @@
 
 			<header class="entry-header top-spacer bottom-spacer">
 
+				<?php do_action( 'coblocks_before_entry_title' ); ?>
+
 				<?php the_title( '<h1 class="entry-title h1">', '</h1>' ); ?>
+
+				<?php do_action( 'coblocks_after_entry_title' ); ?>
 
 				<?php coblocks_posted_on(); ?>
 
 			</header>
 
 		<?php } ?>
+
+		<?php do_action( 'coblocks_before_content' ); ?>
 
 		<div class="entry-content">
 			<?php
@@ -41,6 +47,8 @@
 				);
 			?>
 		</div>
+
+		<?php do_action( 'coblocks_after_content' ); ?>
 
 	</div>
 

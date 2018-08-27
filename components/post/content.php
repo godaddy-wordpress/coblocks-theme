@@ -15,11 +15,15 @@
 	<header class="entry-header top-spacer bottom-spacer">
 
 		<?php
+		do_action( 'coblocks_before_entry_title' );
+
 		if ( is_single() ) {
 			the_title( '<h1 class="entry-title h1">', '</h1>' );
 		} else {
 			the_title( '<h2 class="entry-title h1"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		}
+
+		do_action( 'coblocks_after_entry_title' );
 		?>
 
 		<?php coblocks_posted_on(); ?>
@@ -27,6 +31,8 @@
 	</header>
 
 	<?php coblocks_post_thumbnail(); ?>
+
+	<?php do_action( 'coblocks_before_content' ); ?>
 
 	<div class="entry-content">
 
@@ -44,6 +50,8 @@
 		?>
 
 	</div>
+
+	<?php do_action( 'coblocks_after_content' ); ?>
 
 	<?php if ( is_single() ) { ?>
 
