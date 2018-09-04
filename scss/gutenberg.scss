@@ -342,6 +342,19 @@ body.gutenberg-editor-page {
 	}
 }
 
+.wp-block-verse,
+.wp-block-preformatted {
+	background-color: $color--background-pre;
+	padding: 40px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+
+	pre {
+		font: 14px/1.7 Monaco, Courier, "Courier New", monospace;
+		padding: 0;
+	}
+}
+
 .editor-block-list__block[data-type="core/quote"] {
 	@media (min-width: 600px) {
 		margin-top: 0.6em;

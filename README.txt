@@ -80,6 +80,9 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.1.3 =
+* Tweak: Adjust verse and preformatted block styling
+
 = 1.1.2 =
 * Fix: Update editor-color-palette for the latest Gutenberg release
 * Tweak: Add wide and full alignment styling for the CoBlocks Gif block
