@@ -189,6 +189,8 @@ function coblocks_social_links_icons() {
 		'wordpress.com'    => 'wordpress',
 		'yelp.com'         => 'yelp',
 		'youtube.com'      => 'youtube',
+		'mastodon.social'  => 'mastodon',
+		'norden.social'  => 'mastodon',
 	);
 
 	return apply_filters( 'coblocks_social_links_icons', $social_links_icons );
