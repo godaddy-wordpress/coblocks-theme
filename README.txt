@@ -81,6 +81,7 @@ License: GPLv2 or later
 == Changelog ==
 
 = 1.1.3 =
+* New: Add social icon support for Mastodon
 * Tweak: Adjust verse and preformatted block styling
 
 = 1.1.2 =
