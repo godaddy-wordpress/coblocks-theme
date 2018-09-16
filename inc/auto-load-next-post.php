@@ -13,7 +13,12 @@ if ( ! function_exists( 'coblocks_alnp_setup' ) ) :
 	 * Add Auto Load Next Post support.
 	 */
 	function coblocks_alnp_setup() {
-		add_theme_support( 'auto-load-next-post' );
+		add_theme_support( 'auto-load-next-post', array(
+			'content_container'    => 'main.site-main',
+			'title_selector'       => 'h1.entry-title',
+			'navigation_container' => 'nav.post-navigation',
+			'comments_container'   => 'div#comments',
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'coblocks_alnp_setup' );
