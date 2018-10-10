@@ -176,6 +176,7 @@ function coblocks_social_links_icons() {
 		'smugmug.net'      => 'smugmug',
 		'snapchat.com'     => 'snapchat-ghost',
 		'soundcloud.com'   => 'soundcloud',
+		'slack.com'        => 'slack',
 		'spotify.com'      => 'spotify',
 		'stumbleupon.com'  => 'stumbleupon',
 		'tumblr.com'       => 'tumblr',
@@ -190,7 +191,7 @@ function coblocks_social_links_icons() {
 		'yelp.com'         => 'yelp',
 		'youtube.com'      => 'youtube',
 		'mastodon.social'  => 'mastodon',
-		'norden.social'  => 'mastodon',
+		'norden.social'    => 'mastodon',
 	);
 
 	return apply_filters( 'coblocks_social_links_icons', $social_links_icons );
