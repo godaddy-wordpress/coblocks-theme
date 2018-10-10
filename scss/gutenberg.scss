@@ -5,8 +5,8 @@
 @import "mixins";
 
 // Editor Width
-$editor-width: 700px;
-$editor-wide-width: 1000px;
+$editor-width: 740px;
+$editor-wide-width: 920px;
 
 body.gutenberg-editor-page {
 
@@ -14,21 +14,33 @@ body.gutenberg-editor-page {
 	@import "blocks/color-palette";
 
 	// Main column width.
-	.editor-block-list__block,
-	.editor-post-title__block,
-	.editor-default-block-appender {
-		max-width: $editor-width;
+	.editor-block-list__layout {
+
+		.editor-block-list__block,
+		.editor-default-block-appender {
+			max-width: $editor-width;
+		}
+	}
+
+	.editor-post-title {
+
+		.editor-post-title__block {
+			max-width: $editor-width;
+		}
 	}
 
 	// Wide and full aligned widths.
-	.editor-block-list__block {
+	.editor-block-list__layout {
 
-		&[data-align="wide"] {
-			max-width: $editor-wide-width;
-		}
+		.editor-block-list__block {
 
-		&[data-align="full"] {
-			max-width: none;
+			&[data-align="wide"] {
+				max-width: $editor-wide-width;
+			}
+
+			&[data-align="full"] {
+				max-width: none;
+			}
 		}
 	}
 
@@ -60,6 +72,11 @@ body.gutenberg-editor-page {
 			}
 		}
 	}
+
+	.editor-post-permalink__link {
+		box-shadow: none !important;
+		color: #7e8993 !important;
+	}
 }
 
 .edit-post-visual-editor {
@@ -71,9 +88,9 @@ body.gutenberg-editor-page {
 	}
 
 	// The editor's body/paragraph text.
-	p,
-	ul,
-	ol {
+	.editor-block-list__block p,
+	.editor-block-list__block ul,
+	.editor-block-list__block ol {
 		@include fluid-type(600px, 820px, 17px, 19px);
 		@include fluid-line-height(600px, 820px, 1.66, calc(1.4em + (1.6 - 1.3) * ((100vw - 18em) / (35 - 18))), 1.75);
 		color: $black;
