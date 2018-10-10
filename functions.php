@@ -118,6 +118,40 @@ function coblocks_setup() {
 		)
 	);
 
+	/**
+	 * Custom font sizes for use in the editor.
+	 *
+	 * @link https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#block-font-sizes
+	 */
+	add_theme_support(
+		'editor-font-sizes', array(
+			array(
+				'name'      => __( 'small', '@@textdomain' ),
+				'shortName' => __( 'S', '@@textdomain' ),
+				'size'      => 16,
+				'slug'      => 'small',
+			),
+			array(
+				'name'      => __( 'regular', '@@textdomain' ),
+				'shortName' => __( 'M', '@@textdomain' ),
+				'size'      => 19,
+				'slug'      => 'regular',
+			),
+			array(
+				'name'      => __( 'large', '@@textdomain' ),
+				'shortName' => __( 'L', '@@textdomain' ),
+				'size'      => 24,
+				'slug'      => 'large',
+			),
+			array(
+				'name'      => __( 'larger', '@@textdomain' ),
+				'shortName' => __( 'XL', '@@textdomain' ),
+				'size'      => 32,
+				'slug'      => 'larger',
+			),
+		)
+	);
+
 	// Add support for full width images and other content such as videos.
 	add_theme_support( 'align-wide' );
 
