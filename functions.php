@@ -108,7 +108,7 @@ function coblocks_setup() {
 			array(
 				'name'  => esc_html__( 'Gray', '@@textdomain' ),
 				'slug'  => 'gray',
-				'color' => '#727477',
+				'color' => '#656e79',
 			),
 			array(
 				'name'  => esc_html__( 'Light Gray', '@@textdomain' ),
