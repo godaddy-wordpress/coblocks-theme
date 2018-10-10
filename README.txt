@@ -2,7 +2,7 @@
 
 Contributors: richtabor, themebeans, coblocks
 Requires at least: 4.7
-Tested up to: 4.9.6
+Tested up to: 4.9.8
 Version: @@pkg.version
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -80,8 +80,20 @@ License: GPLv2 or later
 
 == Changelog ==
 
-= 1.1.3 =
+= 1.1.5 =
+* New: Add social icon support for Slack
+* New: Add custom font sizes using editor-font-sizes
+* New: Add a beautiful default color palette
+* Fix: Firefox display issue with the WordPress social icon
+* Tweak: Adjust positioning of social icons
+* Tweak: Tweak editor styles to accurately reflect Gutenberg 3.9+
+* Tweak: Add improved for Auto Load Next Post v1.5+ (Thanks Sébastien Dumont!)
+* Tweak: .has-light-gray-color to use a non-transparent color
+
+= 1.1.4 =
 * New: Add social icon support for Mastodon
+
+= 1.1.3 =
 * Tweak: Adjust verse and preformatted block styling
 
 = 1.1.2 =
