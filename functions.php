@@ -101,6 +101,11 @@ function coblocks_setup() {
 	add_theme_support(
 		'editor-color-palette', array(
 			array(
+				'name'  => esc_html__( 'Dark Black', '@@textdomain' ),
+				'slug'  => 'dark-black',
+				'color' => '#040402',
+			),
+			array(
 				'name'  => esc_html__( 'Black', '@@textdomain' ),
 				'slug'  => 'black',
 				'color' => '#2a2a2a',
@@ -111,9 +116,34 @@ function coblocks_setup() {
 				'color' => '#656e79',
 			),
 			array(
+				'name'  => esc_html__( 'Medium Gray', '@@textdomain' ),
+				'slug'  => 'medium-gray',
+				'color' => '#8f949e',
+			),
+			array(
 				'name'  => esc_html__( 'Light Gray', '@@textdomain' ),
 				'slug'  => 'light-gray',
 				'color' => '#f8f8f8',
+			),
+			array(
+				'name'  => esc_html__( 'CoBlocks Blue', '@@textdomain' ),
+				'slug'  => 'coblocks-blue',
+				'color' => '#575ffd',
+			),
+			array(
+				'name'  => esc_html__( 'CoBlocks Green', '@@textdomain' ),
+				'slug'  => 'coblocks-green',
+				'color' => '#21e8af',
+			),
+			array(
+				'name'  => esc_html__( 'CoBlocks Orange', '@@textdomain' ),
+				'slug'  => 'coblocks-orange',
+				'color' => '#ff5b44',
+			),
+			array(
+				'name'  => esc_html__( 'CoBlocks Yellow', '@@textdomain' ),
+				'slug'  => 'coblocks-yellow',
+				'color' => '#fee13d',
 			),
 		)
 	);
