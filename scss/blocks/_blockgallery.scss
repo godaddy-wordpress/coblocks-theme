@@ -1,0 +1,19 @@
+.blockgallery {
+	margin-top: 2.5em !important;
+	margin-bottom: 2.5em !important;
+
+	&:not(.alignfull):not(.alignwide) {
+		max-width: 720px !important;
+	}
+
+	&.alignwide {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $alignwide_width_mobile !important;
+
+		@media (min-width: $alignwide_width) {
+			max-width: $alignwide_width;
+		}
+	}
+}
+
