@@ -156,25 +156,25 @@ function coblocks_setup() {
 	add_theme_support(
 		'editor-font-sizes', array(
 			array(
-				'name'      => __( 'small', '@@textdomain' ),
+				'name'      => __( 'Small', '@@textdomain' ),
 				'shortName' => __( 'S', '@@textdomain' ),
 				'size'      => 16,
 				'slug'      => 'small',
 			),
 			array(
-				'name'      => __( 'regular', '@@textdomain' ),
+				'name'      => __( 'Regular', '@@textdomain' ),
 				'shortName' => __( 'M', '@@textdomain' ),
 				'size'      => 19,
 				'slug'      => 'regular',
 			),
 			array(
-				'name'      => __( 'large', '@@textdomain' ),
+				'name'      => __( 'Large', '@@textdomain' ),
 				'shortName' => __( 'L', '@@textdomain' ),
 				'size'      => 24,
 				'slug'      => 'large',
 			),
 			array(
-				'name'      => __( 'larger', '@@textdomain' ),
+				'name'      => __( 'Larger', '@@textdomain' ),
 				'shortName' => __( 'XL', '@@textdomain' ),
 				'size'      => 32,
 				'slug'      => 'larger',
