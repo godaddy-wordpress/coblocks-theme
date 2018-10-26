@@ -32,21 +32,30 @@
 	}
 }
 
-.wp-block-coblocks-author__content-heading p {
-	margin-bottom: 0;
-	@extend .small;
-	@extend .medium;
-	@extend .sans-serif-font;
-	@extend .gray;
+.wp-block-coblocks-author {
+
+	&__heading {
+		margin-bottom: 0;
+		padding: 0;
+		@extend .small;
+		@extend .medium;
+		@extend .sans-serif-font;
+		@extend .gray;
+	}
+
+	&__name {
+		padding: 0 !important;
+		margin: 9px 0 !important;
+	}
 }
 
-.wp-block-coblocks-author__content-name h3 {
-	margin-bottom: 14px;
-	margin-top: 14px;
-	padding: 0;
+.wp-block-button__link {
+	font-family: $font__heading;
+	text-decoration: none !important;
+	box-shadow: none !important;
+	padding-bottom: 10px !important;
 }
 
-.wp-block-coblocks-author__content-button {
-	@extend .button;
-	padding-bottom: 0.43em;
+.wp-block-button.is-style-squared .wp-block-button__link {
+	border-radius: 4px;
 }
