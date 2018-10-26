@@ -36,6 +36,11 @@ function coblocks_register_required_plugins() {
 			'required' => false,
 		),
 		array(
+			'name'     => esc_html__( 'Block Gallery', '@@textdomain' ),
+			'slug'     => 'block-gallery',
+			'required' => false,
+		),
+		array(
 			'name'     => esc_html__( 'Login Designer', '@@textdomain' ),
 			'slug'     => 'login-designer',
 			'required' => false,
