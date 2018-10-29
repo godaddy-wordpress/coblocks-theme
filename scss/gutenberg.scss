@@ -543,3 +543,20 @@ body.gutenberg-editor-page {
 		width: 100%;
 	}
 }
+
+/** === Block Gallery === */
+
+.blockgallery {
+	margin-top: 2.4em !important;
+	margin-bottom: 2.4em !important;
+
+	figcaption {
+		font-family: $font__heading;
+	}
+}
+
+.editor-block-list__block[data-type="blockgallery/carousel"] {
+	.components-resizable-box__container {
+		margin-bottom: 2.8em;
+	}
+}
