@@ -80,6 +80,11 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.1.6 =
+* New: Add support for Block Gallery, gallery Gutenberg Blocks - https://wpblockgallery.com
+* Tweak: Update editor font size name labels
+* Tweak: Update styles for the CoBlocks Author block
+
 = 1.1.5 =
 * New: Add social icon support for Slack
 * New: Add custom font sizes using editor-font-sizes
