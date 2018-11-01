@@ -80,6 +80,9 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.1.7 =
+* Tweak: Adjust Block Gallery styling
+
 = 1.1.6 =
 * New: Add support for Block Gallery, gallery Gutenberg Blocks - https://wpblockgallery.com
 * Tweak: Update editor font size name labels
