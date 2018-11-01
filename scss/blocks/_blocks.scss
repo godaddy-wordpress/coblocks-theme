@@ -16,6 +16,10 @@
 		}
 	}
 
+	 > *.alignwide {
+		max-width: $alignwide_width !important;
+	}
+
 	> [id*="more"] {
 		display: none;
 	}

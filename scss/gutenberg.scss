@@ -6,7 +6,7 @@
 
 // Editor Width
 $editor-width: 740px;
-$editor-wide-width: 920px;
+$editor-wide-width: 1040px;
 
 body.gutenberg-editor-page {
 
@@ -547,16 +547,17 @@ body.gutenberg-editor-page {
 /** === Block Gallery === */
 
 .blockgallery {
-	margin-top: 2.4em !important;
-	margin-bottom: 2.4em !important;
+	margin-top: 2.3em !important;
+	margin-bottom: 2.3em !important;
 
 	figcaption {
 		font-family: $font__heading;
 	}
 }
 
+// body[data-type="blockgallery/carousel"] {
 .editor-block-list__block[data-type="blockgallery/carousel"] {
 	.components-resizable-box__container {
-		margin-bottom: 2.8em;
+		margin-bottom: 2.3em;
 	}
 }
