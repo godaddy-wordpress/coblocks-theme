@@ -80,6 +80,9 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.1.8 =
+* Tweak: Add styling for the new CoBlocks Social block
+
 = 1.1.7 =
 * Tweak: Adjust Block Gallery styling
 
