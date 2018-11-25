@@ -1,5 +1,15 @@
-.wp-block-preformatted {
-	max-width: 720px !important;
-	padding-left: 40px !important;
-	padding-right: 40px !important;
+.entry-content {
+	.wp-block-preformatted {
+		background: none;
+		font-size: $font__size-xs;
+		line-height: 1.8;
+		margin-bottom: $content__spacer--mobile + 4px;
+		margin-top: $content__spacer--mobile + 5px;
+		white-space: pre-wrap;
+
+		@media screen and (min-width: $content__media-query) {
+			margin-bottom: $content__spacer + 5px;
+			margin-top: $content__spacer + 6px;
+		}
+	}
 }

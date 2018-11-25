@@ -1,78 +1,135 @@
-.entry-content {
+// Editor customizations.
+@import "color-palette";
+@import "font-sizes";
 
-	> *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
-		max-width: $content_width;
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: $content_padding;
-		padding-right: $content_padding;
-	}
+// Import blocks.
+@import "archives-categories";
+@import "audio-video";
+@import "blockquote";
+@import "button";
+@import "captions";
+@import "code";
+@import "columns";
+@import "cover";
+@import "embed";
+@import "file";
+@import "gallery";
+@import "image";
+@import "latest-comments";
+@import "latest-posts";
+@import "list";
+@import "more";
+@import "paragraph";
+@import "preformatted";
+@import "pullquote";
+@import "separator";
+@import "table";
+@import "verse";
 
-	> [class*="wp-block"]:not(.wp-block-image):not(.wp-block-gallery):not(.wp-block-writy-ad):not(.wp-block-quote):not(.alignleft):not(.alignright) {
-		margin-bottom: 20px;
+// Third party blocks.
+@import "coblocks";
+@import "blockgallery";
 
-		@media (min-width: 600px) {
-			margin-bottom: 27px;
-		}
-	}
-
-	 > *.alignwide {
-		max-width: $alignwide_width !important;
-	}
-
-	> [id*="more"] {
-		display: none;
-	}
-
-	@include headings {
-		margin-top: 35px;
-		margin-bottom: 12px;
-
-		@media (min-width: 600px) {
-			margin-top: 60px;
-		}
-	}
-
-	.wp-block-button__link {
-		box-shadow: none !important;
-	}
+.entry-media,
+.entry-header,
+.entry-footer {
+	max-width: $content__width;
+	padding-left: $content__padding;
+	padding-right: $content__padding;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-@import "cover-image";
-@import "dynamic-separator";
-@import "image-and-gallery";
-@import "paragraph";
-@import "pullquote";
-@import "quote";
-@import "separator";
-@import "subhead";
-@import "gallery";
-@import "embed";
-@import "audio";
-@import "verse";
-@import "preformatted";
+.entry-media {
+	max-width: $content__width--wide;
+}
 
-/*--------------------------------------------------------------
-## Custom Color Palette
---------------------------------------------------------------*/
-@import "blocks/color-palette";
+.entry-content > *,
+.entry-summary > * {
+	margin: $content__spacer--mobile auto;
+	max-width: $content__width;
+	padding-left: $content__padding;
+	padding-right: $content__padding;
 
-/*--------------------------------------------------------------
-## Custom Font Sizes
---------------------------------------------------------------*/
-@import "blocks/font-sizes";
+	@media screen and (min-width: $content__media-query) {
+		margin-bottom: $content__spacer;
+		margin-top: $content__spacer;
+	}
 
-/*--------------------------------------------------------------
-## Block Alignments
---------------------------------------------------------------*/
-@import "blocks/alignments";
+	&:not(p):not(ul):not(ol) {
+		margin: $content__spacer--mobile + 12px auto;
 
-/*--------------------------------------------------------------
-## CoBlocks Blocks
---------------------------------------------------------------*/
-@import "blocks/coblocks";
+		@media screen and (min-width: $content__media-query) {
+			margin-bottom: $content__spacer + 12px;
+			margin-top: $content__spacer + 12px;
+		}
+	}
 
-/*--------------------------------------------------------------
-## Block Gallery Blocks
---------------------------------------------------------------*/
-@import "blocks/blockgallery";
+	&:first-child {
+		margin-top: 0 !important;
+	}
+
+	&:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	&.alignwide {
+		max-width: $content__width--wide;
+
+		@media screen and (min-width: $content__media-query) {
+			margin-bottom: $content__spacer + 20px;
+			margin-top: $content__spacer + 20px;
+		}
+	}
+
+	&.alignfull {
+		margin: $content__spacer + 10px 0;
+		max-width: 100% !important;
+		padding-left: 0;
+		padding-right: 0;
+
+		@media screen and (min-width: $content__media-query) {
+			margin-bottom: $content__spacer + 30px;
+			margin-top: $content__spacer + 30px;
+		}
+	}
+
+	&.alignleft {
+		margin-right: $content__padding;
+		max-width: 100%;
+
+		@media screen and (min-width: $content__align--mobile-media-query--min) {
+			float: left;
+			margin-right: 40px;
+			margin-top: 0;
+			max-width: $content__align--width !important;
+		}
+
+		@media screen and (min-width: $content__media-query) {
+			margin-left: calc(50% - #{$content__align--leftright-margin});
+		}
+	}
+
+	&.alignright {
+		margin-left: $content__padding;
+
+		@media screen and (min-width: $content__align--mobile-media-query--min) {
+			float: right;
+			margin-left: 40px;
+			margin-top: 0;
+			max-width: $content__align--width !important;
+		}
+
+		@media screen and (min-width: $content__media-query) {
+			margin-right: calc(50% - #{$content__align--leftright-margin});
+		}
+	}
+}

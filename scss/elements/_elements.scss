@@ -13,7 +13,7 @@ body {
 	background: $color--background-body; // Fallback for when there is no custom background color defined.
 
 	&.custom-background.nav-open {
-		// Hide the background image when the mobile navigation is open, because we don't want to blur the whole body.
+		// Hide the background image when the mobile navigation is open, because we don't want to blur the body.
 		background-image: none;
 	}
 }
@@ -34,15 +34,11 @@ hr {
 	}
 }
 
-@import "lists";
-
 img {
 	height: auto; // Make sure images are scaled correctly.
 	max-width: 100%; // Adhere to container width.
 	vertical-align: middle;
 }
-
-@import "tables";
 
 @-ms-viewport {
 	width: device-width;

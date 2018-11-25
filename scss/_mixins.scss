@@ -4,6 +4,28 @@
 	}
 }
 
+@mixin blockMobileDisplay {
+	margin-left: $content__padding;
+	margin-right: $content__padding;
+	max-width: $content__width--less-padding;
+
+	@media screen and (min-width: $content__media-query) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@mixin blockWideDisplay {
+	margin-left: $content__padding;
+	margin-right: $content__padding;
+	max-width: $content__width--wide--less-padding;
+
+	@media screen and (min-width: $content__media-query--wide) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 // Output all headings.
 @mixin headings {
 		h1,

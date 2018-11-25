@@ -1,61 +1,140 @@
-.wp-block-coblocks-alert,
-.wp-block-coblocks-accordion {
-	margin: 0 0 1.5em;
+.entry-content {
+	.wp-block-coblocks-alert {
+		@include blockMobileDisplay();
+		padding-bottom: 0.8em;
+		padding-top: 0.7em;
 
-	@media (min-width: 600px) {
-		margin: 0 0 1.8em;
-	}
-}
+		&__title {
+			font-size: 19px;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
 
-.wp-block-coblocks-click-to-tweet__twitter-btn {
-	@extend .sans-serif-font;
-	@include font-size(16px);
-	height: 40px;
-	font-weight: 500;
-	line-height: 42px;
-	padding-left: 0.9em;
-	padding-right: 0.9em;
-}
-
-.wp-block-coblocks-click-to-tweet__text::before {
-	top: 10px;
-}
-
-.wp-block-coblocks-author {
-	margin-left: 20px !important;
-	margin-right: 20px !important;
-
-	@media (min-width: 760px) {
-		max-width: 720px !important;
-		margin-left: auto !important;
-		margin-right: auto !important;
-	}
-}
-
-.wp-block-coblocks-author {
-
-	&__heading {
-		margin-bottom: 0;
-		padding: 0;
-		@extend .small;
-		@extend .medium;
-		@extend .sans-serif-font;
-		@extend .gray;
+		&__text {
+			font-size: 18px;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
 	}
 
-	&__name {
-		padding: 0 !important;
-		margin: 9px 0 !important;
+	.wp-block-coblocks-click-to-tweet {
+
+		&__text {
+			line-height: 1.25;
+			font-style: italic;
+
+			&:not([class*="font-size"]) {
+				font-size: $font__size-lg;
+			}
+		}
+
+		&__text::before {
+			width: 28px;
+			height: 28px;
+			top: 10px;
+		}
+
+		&__twitter-btn {
+			border-radius: 4px;
+			font-family: $font__heading;
+			font-size: 17px;
+			font-weight: 500;
+			height: 34px;
+			line-height: 35px;
+			margin-bottom: 10px !important;
+			margin-top: 1em;
+			padding: 0 0.75em;
+
+			@media (max-width: 700px) {
+				font-size: $font__size-sm;
+			}
+
+			&::before {
+				top: 3px;
+				margin-right: 7px;
+			}
+		}
 	}
-}
 
-.wp-block-button__link {
-	font-family: $font__heading;
-	text-decoration: none !important;
-	box-shadow: none !important;
-	padding-bottom: 10px !important;
-}
+	.wp-block-coblocks-author {
+		@include blockMobileDisplay();
+		border-radius: 0;
+		padding-left: 30px;
+		padding-right: 30px;
 
-.wp-block-button.is-style-squared .wp-block-button__link {
-	border-radius: 4px;
+		&__heading {
+			color: $gray;
+			font-size: 18px;
+			font-weight: 500;
+			margin-bottom: 0;
+			font-family: $font__heading;
+		}
+
+		&__biography {
+			font-size: $font__size-sm;
+			margin-bottom: 0.8em;
+			margin-top: 0.2em;
+		}
+
+		&__name {
+			font-size: $font__size-md;
+			font-family: $font__heading;
+			font-weight: $font__weight-heading;
+			margin: 0.15em 0 0;
+			padding: 0;
+		}
+
+		.wp-block-button {
+			margin-top: 0;
+		}
+	}
+
+	.wp-block-coblocks-dynamic-separator {
+		@include blockMobileDisplay();
+		max-width: $content__width - ( $content__padding * 4 );
+
+		@media screen and (max-width: $content__width) {
+			padding-left: 0;
+			padding-right: 0;
+			width: calc( 100% - #{$content__padding * 2} );
+		}
+
+		&.is-style-dots::before {
+			font-size: 36px;
+			font-weight: 800;
+			letter-spacing: 0.55em;
+			margin-left: 19px;
+    			top: calc(50% - 28px);
+		}
+	}
+
+	.wp-block-coblocks-pricing-table-item {
+
+		&__title {
+			font-size: $font__size-sm;
+			font-family: $font__heading;
+			font-weight: $font__weight-heading;
+			margin-bottom: 1.5em !important;
+			padding-top: 0;
+		}
+
+		&__currency {
+			font-size: $font__size-sm;
+		}
+
+		&__price-wrapper {
+			margin-bottom: 0.7em;
+		}
+
+		&__amount {
+			font-family: $font__heading;
+			font-weight: $font__weight-heading;
+			letter-spacing: -2px;
+		}
+
+		&__features {
+			font-size: $font__size-sm;
+			margin-bottom: 1.7em;
+		}
+	}
 }
