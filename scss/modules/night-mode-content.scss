@@ -28,6 +28,10 @@ blockquote,
 	color: $night_mode_text;
 }
 
+.has-background {
+	background: lighten( #1c1b1b, 7% ) !important;
+}
+
 .has-black-background-color {
 	background-color: $night_mode_text;
 }
@@ -38,10 +42,6 @@ blockquote,
 
 .has-light-gray-background-color {
 	background-color: $background;
-}
-
-.has-light-gray-color {
-	color: $background;
 }
 
 .has-black-color {
