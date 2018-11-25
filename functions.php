@@ -93,6 +93,22 @@ function coblocks_setup() {
 		)
 	);
 
+	/*
+	 * Enable support for Customizer Selective Refresh.
+	 * See: https://make.wordpress.org/core/2016/02/16/selective-refresh-in-the-customizer/
+	 */
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	/*
+	 * Enable support for the WordPress default Theme Logo
+	 * See: https://codex.wordpress.org/Theme_Logo
+	 */
+	add_theme_support(
+		'custom-logo', array(
+			'flex-width' => true,
+		)
+	);
+
 	/**
 	 * Custom colors for use in the editor.
 	 *
@@ -156,55 +172,46 @@ function coblocks_setup() {
 	add_theme_support(
 		'editor-font-sizes', array(
 			array(
-				'name'      => __( 'Small', '@@textdomain' ),
-				'shortName' => __( 'S', '@@textdomain' ),
+				'name'      => esc_html__( 'Small', '@@textdomain' ),
+				'shortName' => esc_html__( 'S', '@@textdomain' ),
 				'size'      => 16,
 				'slug'      => 'small',
 			),
 			array(
-				'name'      => __( 'Regular', '@@textdomain' ),
-				'shortName' => __( 'M', '@@textdomain' ),
+				'name'      => esc_html__( 'Regular', '@@textdomain' ),
+				'shortName' => esc_html__( 'M', '@@textdomain' ),
 				'size'      => 19,
 				'slug'      => 'regular',
 			),
 			array(
-				'name'      => __( 'Large', '@@textdomain' ),
-				'shortName' => __( 'L', '@@textdomain' ),
+				'name'      => esc_html__( 'Large', '@@textdomain' ),
+				'shortName' => esc_html__( 'L', '@@textdomain' ),
 				'size'      => 24,
 				'slug'      => 'large',
 			),
 			array(
-				'name'      => __( 'Larger', '@@textdomain' ),
-				'shortName' => __( 'XL', '@@textdomain' ),
+				'name'      => esc_html__( 'Huge', '@@textdomain' ),
+				'shortName' => esc_html__( 'XL', '@@textdomain' ),
 				'size'      => 32,
-				'slug'      => 'larger',
+				'slug'      => 'huge',
 			),
 		)
 	);
 
-	// Add support for full width images and other content such as videos.
+	// Add support for default block styles.
+	add_theme_support( 'wp-block-styles' );
+
+	// Add support for full and wide align images.
 	add_theme_support( 'align-wide' );
 
-	/*
-	 * This theme styles the visual editor to resemble the theme style.
-	 */
-	add_editor_style( array( 'assets/css/editor.css', coblocks_fonts_url() ) );
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
 
-	/*
-	 * Enable support for Customizer Selective Refresh.
-	 * See: https://make.wordpress.org/core/2016/02/16/selective-refresh-in-the-customizer/
-	 */
-	add_theme_support( 'customize-selective-refresh-widgets' );
+	// Enqueue editor styles.
+	add_editor_style( 'assets/css/style-editor.css' );
 
-	/*
-	 * Enable support for the WordPress default Theme Logo
-	 * See: https://codex.wordpress.org/Theme_Logo
-	 */
-	add_theme_support(
-		'custom-logo', array(
-			'flex-width' => true,
-		)
-	);
+	// Enqueue fonts in the editor.
+	add_editor_style( coblocks_fonts_url() );
 
 	/*
 	 * Define starter content for the theme.
@@ -301,10 +308,10 @@ add_action( 'widgets_init', 'coblocks_widgets_init' );
 function coblocks_scripts() {
 
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'coblocks-fonts', coblocks_fonts_url(), array(), null );
+	wp_enqueue_style( 'coblocks-fonts', coblocks_fonts_url(), false, '@@pkg.version', 'all' );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'coblocks-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'coblocks-style', get_stylesheet_uri(), false, '@@pkg.version', 'all' );
 
 	// Scripts.
 	wp_enqueue_script( 'jquery-fitvids', get_theme_file_uri( '/assets/js/jquery.fitvids.js' ), array( 'jquery' ), '@@pkg.version', true );
@@ -330,19 +337,6 @@ function coblocks_scripts() {
 	wp_localize_script( 'coblocks-navigation', 'coblocksScreenReaderText', $coblocks_l10n );
 }
 add_action( 'wp_enqueue_scripts', 'coblocks_scripts' );
-
-/**
- * Enqueue theme styles within Gutenberg.
- */
-function coblocks_gutenberg_styles() {
-
-	// Load the theme styles within Gutenberg.
-	wp_enqueue_style( 'coblocks-gutenberg', get_theme_file_uri( '/assets/css/gutenberg.css' ), false, '@@pkg.version', 'all' );
-
-	// Add custom fonts to Gutenberg.
-	wp_enqueue_style( 'coblocks-fonts', coblocks_fonts_url(), array(), null );
-}
-add_action( 'enqueue_block_editor_assets', 'coblocks_gutenberg_styles' );
 
 /**
  * Enqueue inline script for the accessibility settings module.

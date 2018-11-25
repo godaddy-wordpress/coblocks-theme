@@ -11,6 +11,7 @@
 	@include font-size(24px);
 }
 
+.has-huge-font-size,
 .has-larger-font-size {
 	@include font-size(32px);
 }
