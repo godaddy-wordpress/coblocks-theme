@@ -38,9 +38,6 @@
 			document.documentElement.className = document.documentElement.className.replace( /(\s*)no-svg(\s*)/, '$1svg$2' );
 		}
 
-		/* FitVids */
-		$( '.entry-content' ).fitVids();
-
 		/* Night Mode */
 		nightToggle.on( 'click', function( e ) {
 

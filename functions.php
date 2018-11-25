@@ -314,7 +314,6 @@ function coblocks_scripts() {
 	wp_enqueue_style( 'coblocks-style', get_stylesheet_uri(), false, '@@pkg.version', 'all' );
 
 	// Scripts.
-	wp_enqueue_script( 'jquery-fitvids', get_theme_file_uri( '/assets/js/jquery.fitvids.js' ), array( 'jquery' ), '@@pkg.version', true );
 	wp_enqueue_script( 'coblocks-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '@@pkg.version', true );
 	wp_enqueue_script( 'coblocks-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '@@pkg.version', true );
 	wp_enqueue_script( 'coblocks-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '@@pkg.version', true );
@@ -516,6 +515,7 @@ require get_theme_file_path( '/inc/template-functions.php' );
 require get_theme_file_path( '/inc/customizer/defaults.php' );
 require get_theme_file_path( '/inc/customizer/customizer.php' );
 require get_theme_file_path( '/inc/customizer/customizer-css.php' );
+require get_theme_file_path( '/inc/customizer/customizer-editor.php' );
 require get_theme_file_path( '/inc/customizer/sanitization.php' );
 
 /**
