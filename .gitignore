@@ -13,3 +13,4 @@
 _demo/
 _dist/
 node_modules
+environment.json
