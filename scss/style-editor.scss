@@ -344,7 +344,7 @@ figcaption,
 	}
 }
 
-/** === Blockquote === */
+/** === Quote === */
 
 .wp-block-quote {
 	p {
@@ -550,12 +550,13 @@ figcaption,
 /** === Button === */
 
 .wp-block-button {
-	.wp-block-button__link {
+	&__link {
 		@include fluid-type(600px, 1200px, 17px, 19px);
 		border-radius: 30px;
 		font-weight: 500;
 		font-family: $font__heading;
 		font-size: 18px;
+		line-height: 24px;
 		padding: 14px 30px 13px;
 		box-shadow: none !important;
 		transition: background 200ms cubic-bezier(0.645, 0.045, 0.355, 1), border 200ms cubic-bezier(0.645, 0.045, 0.355, 1), color 200ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -765,7 +766,6 @@ ul.wp-block-categories__list {
 
 .wp-block-embed {
 	&-twitter {
-		margin-bottom: -10px;
 
 		iframe {
 			margin-bottom: -10px !important;

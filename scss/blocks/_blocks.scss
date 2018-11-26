@@ -5,7 +5,6 @@
 // Import blocks.
 @import "archives-categories";
 @import "audio-video";
-@import "blockquote";
 @import "button";
 @import "captions";
 @import "code";
@@ -22,6 +21,7 @@
 @import "paragraph";
 @import "preformatted";
 @import "pullquote";
+@import "quote";
 @import "separator";
 @import "table";
 @import "verse";
@@ -130,6 +130,15 @@
 
 		@media screen and (min-width: $content__media-query) {
 			margin-right: calc(50% - #{$content__align--leftright-margin});
+		}
+	}
+
+	.alignleft,
+	.alignright {
+		> figcaption {
+			@media screen and (max-width: $content__align--mobile-media-query--max) {
+				display: block !important;
+			}
 		}
 	}
 }
