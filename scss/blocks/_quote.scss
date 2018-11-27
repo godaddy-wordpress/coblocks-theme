@@ -1,16 +1,28 @@
 .entry-content {
 	.wp-block-quote {
-		padding-left: $content__padding;
-		padding-right: $content__padding;
+		@include blockMobileDisplay();
 
 		&:not(.is-style-large) {
 			border-left: $block__quote--border-width solid $black;
+			padding-left: 20px;
+
+			@media screen and (min-width: 600px) {
+				padding-left: 30px;
+			}
 
 			p {
-				font-size: $font__size-lg;
+				font-size: $font__size-md;
 				font-family: $font__heading;
-				font-weight: $font__weight-heading;
+				font-weight: 500;
 				font-style: normal;
+
+				@media screen and (min-width: 600px) {
+					font-size: $font__size-mdlrg;
+				}
+			}
+
+			cite {
+				font-family: $block__quote--cite-font;
 			}
 		}
 
@@ -22,9 +34,9 @@
 		cite {
 			color: $gray;
 			display: block;
-			font-size: $font__size-xs;
-			font-family: $block__quote--cite-font;
-			margin-top: 10px;
+			font-size: $font__size-sm;
+			font-weight: 500;
+			margin-top: 15px;
 		}
 
 		&.is-style-large {
@@ -35,19 +47,25 @@
 			@media screen and (min-width: $content__media-query) {
 				margin-bottom: $content__spacer + 12px;
 				margin-top: $content__spacer + 12px;
-				padding-left: 75px;
+				padding-left: 60px;
 			}
 
 			p:first-of-type {
-				font-size: $font__size-xl;
+				font-size: $font__size-md;
 				font-style: italic;
-				line-height: 1.25;
+				line-height: 1.5;
+
+				@media screen and (min-width: 600px) {
+					font-size: $font__size-mdlrg;
+					line-height: 1.4;
+				}
 			}
 
 			cite {
 				font-size: $font__size-sm;
-				margin-top: 1.25em;
+				margin-top: 0.35em;
 				text-align: inherit;
+				font-style: italic;
 			}
 		}
 	}

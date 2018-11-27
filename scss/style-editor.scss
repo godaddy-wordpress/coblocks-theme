@@ -348,6 +348,7 @@ figcaption:not(.blockgallery--caption),
 	}
 }
 
+
 /** === Quote === */
 
 .wp-block-quote {
@@ -357,18 +358,24 @@ figcaption:not(.blockgallery--caption),
 
 	&:not(.is-style-large) {
 		border-left: $block__quote--border-width solid $black;
-		margin-left: -14px;
-		padding-left: 10px;
+		padding-left: 20px;
 
 		@media screen and (min-width: 600px) {
-			margin-left: -1.35em;
-			padding-left: 1em;
+			padding-left: 30px;
 		}
 
 		p {
 			font-family: $font__heading;
-			font-size: $font__size-lg;
-			font-weight: $font__weight-heading;
+			font-size: $font__size-md;
+			font-weight: 500;
+
+			@media screen and (min-width: 600px) {
+				font-size: $font__size-mdlrg;
+			}
+		}
+
+		.wp-block-quote__citation {
+			font-family: $block__quote--cite-font;
 		}
 	}
 
@@ -382,33 +389,34 @@ figcaption:not(.blockgallery--caption),
 		}
 
 		p {
-			font-size: $font__size-xl;
-			line-height: 1.25 !important;
+			line-height: 1.5 !important;
+			font-size: $font__size-md;
+			font-style: italic;
+
+			@media screen and (min-width: 600px) {
+				line-height: 1.4 !important;
+				font-size: $font__size-mdlrg;
+			}
 		}
 
 		.wp-block-quote__citation {
 			font-size: $font__size-sm;
-			margin-top: 2.5em;
 			margin-bottom: 10px;
 			text-align: inherit;
+			margin-top: -25px;
+			text-align: inherit;
+			font-style: italic;
 		}
 	}
 
 	.wp-block-quote__citation {
 		color: $gray;
-		font-size: $font__size-xs;
-		font-family: $block__quote--cite-font;
+		font-size: $font__size-sm;
+		font-weight: 500;
 	}
 
 	.editor-rich-text + .editor-rich-text {
-		margin-top: -25px;
-	}
-}
-
-.wp-block[data-type="core/quote"] {
-
-	.editor-block-mover {
-		left: -45px;
+		margin-top: -15px;
 	}
 }
 
