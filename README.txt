@@ -77,7 +77,8 @@ License: GPLv2 or later
 == Changelog ==
 
 = 1.2.1 =
-* Teak: Touch up quote block styling
+* Tweak: Touch up quote block styling
+* Tweak: Improve Click to Tweet styles
 
 = 1.2.0 =
 * New: Major update to editor styles for the Gutenberg block editor
