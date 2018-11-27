@@ -47,7 +47,7 @@ function coblocks_editor_customizer_generated_values() {
 	$css .= '.editor-styles-wrapper.edit-post-visual-editor { color: ' . esc_attr( $text_color ) . '; }';
 	$css .= '.wp-block-heading h1, .wp-block-heading h2, .wp-block-heading h3, .wp-block-heading h4, .wp-block-heading h5, .wp-block-heading h6 { color: ' . esc_attr( $heading_color ) . ' !important; }';
 	$css .= '.editor-styles-wrapper.edit-post-visual-editor .editor-post-title__block .editor-post-title__input { color: ' . esc_attr( $heading_color ) . '; }';
-	$css .= '.editor-styles-wrapper.edit-post-visual-editor figcaption { color: ' . esc_attr( $alt_heading_color ) . ' }';
+	$css .= '.editor-styles-wrapper.edit-post-visual-editor figcaption:not(.blockgallery--caption), .editor-styles-wrapper.edit-post-visual-editor .blockgallery:not(.has-caption-color) figcaption { color: ' . esc_attr( $alt_heading_color ) . ' }';
 
 	return wp_strip_all_tags( apply_filters( 'coblocks_editor_customizer_generated_values', $css ) );
 }

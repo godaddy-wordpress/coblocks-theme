@@ -1,7 +1,6 @@
 .entry-content {
 
 	figcaption {
-		color: $gray;
 		display: block;
 		font-family: $font__figcaption;
 		font-size: $font__size-xs;
@@ -10,9 +9,14 @@
 		padding-top: 10px;
 		text-align: center;
 
-		a:hover {
-			color: $black;
+		a {
+			color: inherit;
 		}
+	}
+
+	figcaption:not(.blockgallery--caption),
+	.blockgallery:not(.has-caption-color) figcaption {
+		color: $gray;
 	}
 
 	.wp-block-gallery .blocks-gallery-item figcaption {

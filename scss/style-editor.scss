@@ -270,18 +270,22 @@ a {
 figcaption {
 	margin-bottom: -10px;
 	margin-top: 10px;
+
+	a {
+		color: inherit;
+	}
 }
 
 figcaption,
 .gallery-caption {
-	color: $gray;
 	font-family: $font__figcaption;
 	font-size: $font__size-xs;
 	line-height: 1.6;
+}
 
-	a {
-		color: $gray;
-	}
+figcaption:not(.blockgallery--caption),
+.blockgallery:not(.has-caption-color) figcaption {
+	color: $gray;
 }
 
 /** === Verse === */

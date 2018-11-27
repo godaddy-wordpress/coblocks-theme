@@ -1,4 +1,9 @@
 .wp-block-blockgallery-stacked {
+
+	.blockgallery--caption {
+		margin-bottom: 0 !important;
+	}
+
 	li:last-child .blockgallery--caption {
 		margin-bottom: -10px !important;
 	}

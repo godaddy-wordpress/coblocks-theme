@@ -92,12 +92,13 @@ function coblocks_customizer_css() {
 
 	.gray,
 	label,
-	blockquote,
 	.logged-in-as,
 	.wp-caption-text,
 	.page-links a span,
 	.comment-metadata a,
 	.taxonomy-description,
+	.entry-content figcaption:not(.blockgallery--caption),
+	.entry-content .blockgallery:not(.has-caption-color) figcaption,
 	.comment-reply-title small,
 	.no-svg .dropdown-toggle .svg-fallback.icon-down {
 		color: ' . esc_attr( $alt_heading_color ) . ';
