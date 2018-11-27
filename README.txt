@@ -55,10 +55,6 @@ normalize.css, Copyright 2012-2018 Nicolas Gallagher and Jonathan Neal
 License: MIT
 Source: https://necolas.github.io/normalize.css/
 
-FitVids.js, Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
-License: WTFPL
-Source: http://sam.zoy.org/wtfpl/
-
 Heebo Font, Copyright Google, Inc. (https://github.com/meirsadan/heebo)
 License: Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 Source: https://fonts.google.com/specimen/Heebo
@@ -79,6 +75,13 @@ Images in assets/images/ directory, Copyright: Inventionn, LLC DBA CoBlocks
 License: GPLv2 or later
 
 == Changelog ==
+
+= 1.2.0 =
+* New: Major update to editor styles for the Gutenberg block editor
+* New: Add compatibility for WordPress 5.0
+* New: Add support for MacOS Mojave Safari dark mode by using prefers-color-scheme: dark
+* New: Add support for responsive embeds
+* Remove: Fitvids.js, as Tabor now supports responsive embeds by default
 
 = 1.1.8 =
 * Tweak: Add styling for the new CoBlocks Social block
