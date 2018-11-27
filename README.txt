@@ -76,6 +76,9 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.2.1 =
+* Teak: Touch up quote block styling
+
 = 1.2.0 =
 * New: Major update to editor styles for the Gutenberg block editor
 * New: Add compatibility for WordPress 5.0
