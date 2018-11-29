@@ -79,6 +79,7 @@ License: GPLv2 or later
 = 1.2.1 =
 * Tweak: Touch up quote block styling
 * Tweak: Improve Click to Tweet styles
+* Fix: Revert header menu font size
 
 = 1.2.0 =
 * New: Major update to editor styles for the Gutenberg block editor
