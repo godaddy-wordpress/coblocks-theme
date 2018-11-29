@@ -44,7 +44,7 @@
 							wp_nav_menu(
 								array(
 									'theme_location' => 'social',
-									'menu_class'     => 'sans-serif-font medium smooth gray h5 list-reset',
+									'menu_class'     => 'sans-serif-font medium smooth gray h6 list-reset',
 									'depth'          => 1,
 									'link_before'    => '<span class="screen-reader-text">',
 									'link_after'     => '</span>' . coblocks_get_svg( array( 'icon' => 'chain' ) ),
@@ -72,7 +72,7 @@
 						wp_nav_menu(
 							array(
 								'theme_location' => 'primary',
-								'menu_class'     => 'primary-menu sans-serif-font medium smooth gray h5 list-reset',
+								'menu_class'     => 'primary-menu sans-serif-font medium smooth gray h6 list-reset',
 								'depth'          => '2',
 							)
 						);

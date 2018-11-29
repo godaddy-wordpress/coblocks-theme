@@ -101,6 +101,7 @@
 			}
 
 			a {
+				@include font-size(17px);
 				display: inline-block;
 				transition: opacity 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
