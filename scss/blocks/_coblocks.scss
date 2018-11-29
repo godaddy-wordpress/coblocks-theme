@@ -158,4 +158,22 @@
 			margin-bottom: 1.7em;
 		}
 	}
+
+	.wp-block-coblocks-social {
+
+		&:not(.has-button-size-sml):not(.has-button-size-lrg) .wp-block-coblocks-social__button {
+			font-size: 15px;
+			padding: 11px 18px 10px;
+		}
+
+		&.has-button-size-sml .wp-block-coblocks-social__button {
+			font-size: 14px;
+			padding: 10px 12px 8px;
+
+			.wp-block-coblocks-social__icon {
+				position: relative;
+				top: -1px;
+			}
+		}
+	}
 }
