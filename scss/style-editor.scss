@@ -810,6 +810,17 @@ ul.wp-block-categories__list {
 	}
 }
 
+.wp-block[data-type="core/gallery"][data-align="left"],
+.wp-block[data-type="core/gallery"][data-align="right"] {
+	.wp-block-gallery:not(.editor-media-placeholder) {
+		margin-bottom: 0;
+
+		@media screen and (min-width: $content__align--mobile-media-query--min) {
+			margin-top: 0.6em;
+		}
+	}
+}
+
 /** === Image === */
 
 .wp-block-image {
