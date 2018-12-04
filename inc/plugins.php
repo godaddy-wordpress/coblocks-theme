@@ -26,11 +26,6 @@ function coblocks_register_required_plugins() {
 	 */
 	$plugins = array(
 		array(
-			'name'     => esc_html__( 'Gutenberg', '@@textdomain' ),
-			'slug'     => 'gutenberg',
-			'required' => false,
-		),
-		array(
 			'name'     => esc_html__( 'CoBlocks', '@@textdomain' ),
 			'slug'     => 'coblocks',
 			'required' => false,
