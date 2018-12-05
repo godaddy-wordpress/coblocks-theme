@@ -233,7 +233,7 @@ function coblocks_setup() {
 		'theme_mods'  => array(
 			'show_on_front'         => 'page',
 			'page_for_posts'        => '{{blog}}',
-			'blogdescription'       => _x( 'CoBlocks, A beautiful Gutenberg-centric WordPress theme', 'Theme starter content', '@@textdomain' ),
+			'blogdescription'       => _x( 'CoBlocks, A beautiful Gutenberg WordPress theme', 'Theme starter content', '@@textdomain' ),
 			'custom_logo'           => '{{image-logo}}',
 			'custom_logo_max_width' => coblocks_defaults( 'custom_logo_max_width' ),
 		),
