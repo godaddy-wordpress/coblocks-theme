@@ -76,13 +76,15 @@ License: GPLv2 or later
 
 == Changelog ==
 
-= 1.2.1 =
+= 1.2.2 =
 * Tweak: Touch up quote block styling
 * Tweak: Improve Click to Tweet styles
 * Tweak: Add fallback background color for custom colors
 * Tweak: Tweak left/right aligned gallery block styles
 * Tweak: Remove Gutenberg as a suggested plugin
 * Tweak: Adjust search results view with better spacing between articles
+
+= 1.2.1 =
 * Fix: Revert header menu font size
 
 = 1.2.0 =
