@@ -76,6 +76,9 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.2.3 =
+* Tweak: Add default blockquote fallback styling
+
 = 1.2.2 =
 * Tweak: Touch up quote block styling
 * Tweak: Improve Click to Tweet styles
