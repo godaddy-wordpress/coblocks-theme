@@ -76,6 +76,10 @@ License: GPLv2 or later
 
 == Changelog ==
 
+= 1.2.4 =
+* Tweak: Add minor style tweak for the Blubrry podcast player
+* Fix: Adjust blockquote fallback
+
 = 1.2.3 =
 * Tweak: Add default blockquote fallback styling
 
