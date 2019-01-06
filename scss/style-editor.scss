@@ -448,7 +448,8 @@ blockquote,
 		hyphens: auto;
 		margin: 0;
 		max-width: 100%;
-		padding: 0;
+		padding: 0 !important;
+		border: none !important;
 		text-align: center;
 		word-break: break-word;
 	}
@@ -951,6 +952,9 @@ ul.wp-block-categories__list {
 }
 
 .wp-block-coblocks-click-to-tweet {
+	border: none !important;
+	padding: 0 !important;
+
 	&__text {
 		color: $color__text-heading;
 		font-style: italic;

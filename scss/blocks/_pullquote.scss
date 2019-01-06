@@ -24,9 +24,10 @@
 		}
 
 		blockquote {
+			border: none !important;
 			margin: 0;
 			max-width: none;
-			padding: 0;
+			padding: 0 !important;
 			text-align: center;
 			word-break: break-word;
 
