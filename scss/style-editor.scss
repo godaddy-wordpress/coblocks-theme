@@ -256,6 +256,11 @@ a {
 		}
 	}
 
+	.editor-inner-blocks &.has-background {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
 	&.has-drop-cap:not(:focus)::first-letter {
 		font-size: 62px;
 		font-weight: 800;
