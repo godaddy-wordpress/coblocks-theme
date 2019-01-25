@@ -247,7 +247,6 @@ a {
 /** === Paragraph === */
 
 .wp-block-paragraph {
-
 	&.has-background {
 		margin: $content__spacer--mobile + 12px auto;
 
@@ -255,11 +254,6 @@ a {
 			margin-bottom: $content__spacer + 12px;
 			margin-top: $content__spacer + 12px;
 		}
-	}
-
-	.editor-inner-blocks &.has-background {
-		margin-top: 0;
-		margin-bottom: 0;
 	}
 
 	&.has-drop-cap:not(:focus)::first-letter {
