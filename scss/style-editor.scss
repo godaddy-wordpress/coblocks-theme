@@ -357,6 +357,14 @@ blockquote,
 		line-height: 1.4 !important;
 	}
 
+	.wp-block:not([data-coblocks-font="1"]) &:not(.is-style-large) {
+		font-family: $font__heading;
+
+		.wp-block-quote__citation {
+			font-family: $block__quote--cite-font;
+		}
+	}
+
 	&:not(.is-style-large) {
 		border-left: $block__quote--border-width solid $black;
 		padding-left: 20px;
@@ -366,17 +374,13 @@ blockquote,
 		}
 
 		p {
-			font-family: $font__heading;
+
 			font-size: $font__size-md;
 			font-weight: 500;
 
 			@media screen and (min-width: 600px) {
 				font-size: $font__size-mdlrg;
 			}
-		}
-
-		.wp-block-quote__citation {
-			font-family: $block__quote--cite-font;
 		}
 	}
 
@@ -957,7 +961,6 @@ ul.wp-block-categories__list {
 
 	&__text {
 		color: $color__text-heading;
-		font-style: italic;
 		line-height: 1.4 !important;
 		font-size: $font__size-md;
 		padding-left: 30px;
