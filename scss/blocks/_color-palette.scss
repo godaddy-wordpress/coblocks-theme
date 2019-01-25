@@ -1,3 +1,34 @@
+
+$color_1: #1d1d1d;
+$color_2: #454545;
+$color_3: #656e79;
+$color_4: #8f949e;
+$color_5: #f5f5f5;
+$color_6: #ffffff;
+$color_7: #152ab0;
+$color_8: #974AFC;
+$color_9: #2ed1a3;
+$color_10: #FFC900;
+
+$colors: (first, $color_1), (second, $color_2), (third, $color_3), (fourth, $color_4), (fifth, $color_5), (sixth, $color_6),
+	(seventh, $color_7), (eigth, $color_8), (nineth, $color_9), (tenth, $color_10);
+
+@each $name, $color in $colors {
+	.has-#{$name}-color {
+		color: $color;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}
+
+// Fallback color for .has-background-color.
+.has-background:not([class*="background-color"]) {
+	background-color: $color--has-background-color-fallback;
+}
+
+// Fallbacks
 $color_1: #040402;
 $color_2: #2a2a2a;
 $color_3: #656e79;
