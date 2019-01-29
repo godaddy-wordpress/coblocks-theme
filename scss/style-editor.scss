@@ -613,6 +613,12 @@ blockquote,
 	.editor-rich-text__tinymce ul {
 		margin-left: 0;
 		padding-left: 1em;
+
+		ul,
+		ol {
+			margin-top: 7px;
+			margin-bottom: 7px;
+		}
 	}
 }
 
