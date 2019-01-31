@@ -60,6 +60,15 @@ blockquote,
 	color: $night_mode_text;
 }
 
+.wp-block-code {
+	border-color: lighten( #1c1b1b, 7% ) !important;
+	color: $night_mode_text;
+
+	code {
+		background: transparent !important;
+	}
+}
+
 .wp-block-quote:not(.is-large)::before {
 	background-color: #8f98a1;
 }
