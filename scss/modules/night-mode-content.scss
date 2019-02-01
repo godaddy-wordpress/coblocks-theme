@@ -86,7 +86,7 @@ blockquote,
 	border-color: transparent;
 }
 
-.icon-night {
+.header__button--night-mode .svg-icon {
 	color: #fff !important;
 }
 
@@ -94,7 +94,7 @@ body .widget-area__wrapper {
 	color: $night_mode_text;
 }
 
-.pagination .icon {
+.pagination .svg-icon {
 	fill: $night_mode_heading;
 }
 
@@ -130,11 +130,11 @@ body .widget-area__wrapper {
 
 @media only screen and (min-width: 600px) {
 
-	.site-header .nav li.current_page_item .icon {
+	.site-header .nav li.current_page_item .svg-icon {
 		fill: $night_mode_heading;
 	}
 
-	.main-navigation ul li.menu-item-has-children:hover .icon, .main-navigation ul li.menu-item-has-children.focus .icon, .main-navigation ul li.page_item_has_children:hover .icon, .main-navigation ul li.page_item_has_children.focus .icon {
+	.main-navigation ul li.menu-item-has-children:hover .svg-icon, .main-navigation ul li.menu-item-has-children.focus .svg-icon, .main-navigation ul li.page_item_has_children:hover .svg-icon, .main-navigation ul li.page_item_has_children.focus .svg-icon {
 		fill: $white !important;
 	}
 
@@ -180,14 +180,14 @@ h1, h2, h3, h4, h5, h6,
 	color: $night_mode_heading;
 }
 
-.search-toggle .icon,
+.search-toggle .svg-icon,
 .site-header .social-navigation svg,
-.search-form .search-submit .icon,
-.main-navigation .dropdown-toggle .icon {
+.search-form .search-submit .svg-icon,
+.main-navigation .dropdown-toggle .svg-icon {
 	fill: $night_mode_heading;
 }
 
-.search-toggle .icon:hover {
+.search-toggle .svg-icon:hover {
 	fill: $white !important;
 }
 

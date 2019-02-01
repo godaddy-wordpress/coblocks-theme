@@ -40,8 +40,8 @@ get_header(); ?>
 
 		the_posts_pagination(
 			array(
-				'prev_text'          => wp_kses( coblocks_get_svg( array( 'icon' => 'left' ) ), coblocks_svg_allowed_html() ) . '<span class="screen-reader-text">' . esc_html__( 'Previous page', '@@textdomain' ) . '</span>',
-				'next_text'          => '<span class="screen-reader-text">' . esc_html__( 'Next page', '@@textdomain' ) . '</span>' . wp_kses( coblocks_get_svg( array( 'icon' => 'right' ) ), coblocks_svg_allowed_html() ),
+				'prev_text'          => coblocks_get_icon_svg( 'chevron_left', 40 ) . '<span class="screen-reader-text">' . __( 'Previous', '@@textdomain' ) . '</span>',
+				'next_text'          => '<span class="screen-reader-text">' . __( 'Next', '@@textdomain' ) . '</span>' . coblocks_get_icon_svg( 'chevron_right', 22 ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', '@@textdomain' ) . ' </span>',
 			)
 		);

@@ -122,7 +122,7 @@
 	wp.customize( 'header_icon_color', function( value ) {
 		value.bind( function( to ) {
 
-			$( '.search-toggle .icon, .site-header .social-navigation svg, .search-form .search-submit .icon' ).css( 'fill', to );
+			$( '.search-toggle .svg-icon, .site-header .social-navigation svg, .search-form .search-submit .svg-icon' ).css( 'fill', to );
 
 			var style, el;
 
@@ -147,7 +147,7 @@
 	wp.customize( 'nav_color', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-header .nav li a' ).css( 'color', to );
-			$( '.main-navigation .dropdown-toggle .icon' ).css( 'fill', to );
+			$( '.main-navigation .dropdown-toggle .svg-icon' ).css( 'fill', to );
 		} );
 	} );
 

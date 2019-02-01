@@ -25,11 +25,11 @@
 	outline: thin dotted;
 }
 
-.dropdown-toggle.toggled-on .icon {
+.dropdown-toggle.toggled-on .svg-icon {
 	transform: rotate(-180deg);
 }
 
-.main-navigation .dropdown-toggle .icon {
+.main-navigation .dropdown-toggle .svg-icon {
 	display: none;
 
 	@media only screen and (min-width: 600px) {
@@ -152,11 +152,11 @@
 			&.focus {
 
 				& > a {
-					opacity: .7;
+					opacity: 0.7;
 				}
 
-				.icon {
-					opacity: .7;
+				.svg-icon {
+					opacity: 0.7;
 					transform: rotate(-180deg) translate3d(0, 1px, 0);
 					transition: transform 200ms cubic-bezier(.694, 0, .335, 1);
 				}
