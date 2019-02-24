@@ -29,7 +29,10 @@
 
 		p {
 			line-height: 1.4;
-			margin-bottom: 0;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
 		}
 
 		cite {
