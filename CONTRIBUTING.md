@@ -8,7 +8,7 @@ __Please Note:__ GitHub is for bug reports and contributions only - if you have 
 
 ## Getting Started
 
-* __Do not report potential security vulnerabilities here. Email them privately to me at [yourfriends at coblocks dot com](mailto:yourfriends@coblocks.com)__
+* __Do not report potential security vulnerabilities here. Email them privately to me at [help at coblocks dot com](mailto:help@coblocks.com)__
 * Before submitting a ticket, please be sure to replicate the behavior with no other plugins active and on a base theme like Twenty Seventeen.
 * Submit a ticket for your issue, assuming one does not already exist.
   * Raise it on our [Issue Tracker](https://github.com/thatplugincompany/coblocks-theme/issues)

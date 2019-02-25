@@ -117,49 +117,54 @@ function coblocks_setup() {
 	add_theme_support(
 		'editor-color-palette', array(
 			array(
-				'name'  => esc_html__( 'Dark Black', '@@textdomain' ),
-				'slug'  => 'dark-black',
-				'color' => '#040402',
+				'name'  => esc_html__( 'Vulcan', '@@textdomain' ),
+				'slug'  => 'first',
+				'color' => '#191521',
 			),
 			array(
-				'name'  => esc_html__( 'Black', '@@textdomain' ),
-				'slug'  => 'black',
-				'color' => '#2a2a2a',
+				'name'  => esc_html__( 'Marlin', '@@textdomain' ),
+				'slug'  => 'second',
+				'color' => '#363b40',
 			),
 			array(
-				'name'  => esc_html__( 'Gray', '@@textdomain' ),
-				'slug'  => 'gray',
+				'name'  => esc_html__( 'Nevada', '@@textdomain' ),
+				'slug'  => 'third',
 				'color' => '#656e79',
 			),
 			array(
-				'name'  => esc_html__( 'Medium Gray', '@@textdomain' ),
-				'slug'  => 'medium-gray',
+				'name'  => esc_html__( 'Mantatee', '@@textdomain' ),
+				'slug'  => 'fourth',
 				'color' => '#8f949e',
 			),
 			array(
-				'name'  => esc_html__( 'Light Gray', '@@textdomain' ),
-				'slug'  => 'light-gray',
-				'color' => '#f8f8f8',
+				'name'  => esc_html__( 'Desert Storm', '@@textdomain' ),
+				'slug'  => 'fifth',
+				'color' => '#f5f5f5',
 			),
 			array(
-				'name'  => esc_html__( 'CoBlocks Blue', '@@textdomain' ),
-				'slug'  => 'coblocks-blue',
-				'color' => '#575ffd',
+				'name'  => esc_html__( 'White', '@@textdomain' ),
+				'slug'  => 'sixth',
+				'color' => '#ffffff',
 			),
 			array(
-				'name'  => esc_html__( 'CoBlocks Green', '@@textdomain' ),
-				'slug'  => 'coblocks-green',
-				'color' => '#21e8af',
+				'name'  => esc_html__( 'Torea Bay', '@@textdomain' ),
+				'slug'  => 'seventh',
+				'color' => '#1e35b9',
 			),
 			array(
-				'name'  => esc_html__( 'CoBlocks Orange', '@@textdomain' ),
-				'slug'  => 'coblocks-orange',
-				'color' => '#ff5b44',
+				'name'  => esc_html__( 'Glitter', '@@textdomain' ),
+				'slug'  => 'eigth',
+				'color' => '#E7E9FB',
 			),
 			array(
-				'name'  => esc_html__( 'CoBlocks Yellow', '@@textdomain' ),
-				'slug'  => 'coblocks-yellow',
-				'color' => '#fee13d',
+				'name'  => esc_html__( 'Peppermint', '@@textdomain' ),
+				'slug'  => 'nineth',
+				'color' => '#d0eac4',
+			),
+			array(
+				'name'  => esc_html__( 'Pipi', '@@textdomain' ),
+				'slug'  => 'tenth',
+				'color' => '#fbf3d6',
 			),
 		)
 	);
@@ -311,10 +316,9 @@ function coblocks_scripts() {
 	wp_enqueue_style( 'coblocks-fonts', coblocks_fonts_url(), false, '@@pkg.version', 'all' );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'coblocks-style', get_stylesheet_uri(), false, '@@pkg.version', 'all' );
+	wp_enqueue_style( 'coblocks-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
 	// Scripts.
-	wp_enqueue_script( 'coblocks-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '@@pkg.version', true );
 	wp_enqueue_script( 'coblocks-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '@@pkg.version', true );
 	wp_enqueue_script( 'coblocks-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '@@pkg.version', true );
 
@@ -326,16 +330,33 @@ function coblocks_scripts() {
 	// Translations in the custom functions.
 	$coblocks_l10n['expand']   = __( 'Expand child menu', '@@textdomain' );
 	$coblocks_l10n['collapse'] = __( 'Collapse child menu', '@@textdomain' );
-	$coblocks_l10n['icon']     = coblocks_get_svg(
-		array(
-			'icon'     => 'down',
-			'fallback' => true,
-		)
-	);
-
+	// $coblocks_l10n['icon']     = coblocks_get_svg(
+	// array(
+	// 'icon'     => 'down',
+	// 'fallback' => true,
+	// )
+	// );
 	wp_localize_script( 'coblocks-navigation', 'coblocksScreenReaderText', $coblocks_l10n );
 }
 add_action( 'wp_enqueue_scripts', 'coblocks_scripts' );
+
+/**
+ * Fix skip link focus in IE11.
+ *
+ * This does not enqueue the script because it is tiny and because it is only for IE11,
+ * thus it does not warrant having an entire dedicated blocking script being loaded.
+ *
+ * @link https://git.io/vWdr2
+ */
+function coblocks_skip_link_focus_fix() {
+	// The following is minified via `terser --compress --mangle -- js/skip-link-focus-fix.js`.
+	?>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<?php
+}
+add_action( 'wp_print_footer_scripts', 'coblocks_skip_link_focus_fix' );
 
 /**
  * Enqueue inline script for the accessibility settings module.
@@ -493,6 +514,11 @@ function coblocks_hex2rgb( $color ) {
 		'blue'  => $b,
 	);
 }
+
+/**
+ * SVG Icons class.
+ */
+require get_theme_file_path( '/classes/class-coblocks-svg-icons.php' );
 
 /**
  * Load the TGMPA class.

@@ -2,32 +2,6 @@
 	@include hide;
 }
 
-.icon--gutenkit {
-	background-color: $black;
-}
-
-.icon-chain {
-	transform: scale(0.6) !important;
-}
-
-.icon-rss {
-	transform: scale(0.6) !important;
-}
-
-.icon-dribbble {
-	transform: scale(1.32) !important;
-}
-
-.icon-wordpress {
-	position: relative;
-	top: 0.05em;
-}
-
-.icon-slack {
-	position: relative;
-	top: 0.029em;
-}
-
 .svg-fallback {
 	display: none;
 
@@ -44,7 +18,7 @@
 	text-align: center;
 	width: 2em;
 
-	.icon {
+	.svg-icon {
 		display: none;
 	}
 
@@ -68,29 +42,3 @@
 .no-svg .dropdown-toggle .svg-fallback.icon-down:before {
 	content: "\005E";
 }
-
-/* Social Menu fallbacks */
-
-// .no-svg .social-navigation {
-
-// 	.screen-reader-text {
-// 		top: 4px;
-// 		clip: auto;
-// 		clip-path: initial;
-// 		height: auto;
-// 		position: relative !important;
-// 		width: auto;
-// 		transition: color 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
-// 	}
-
-// 	li a:hover {
-
-// 		.screen-reader-text {
-// 		 	color: $black;
-// 		}
-// 	}
-
-// 	.icon {
-// 		display: none;
-// 	}
-// }

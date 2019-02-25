@@ -9,8 +9,8 @@ a {
 }
 
 .pingback a:not(.comment-edit-link),
-.entry-content a:not(.bean-btn) {
-	box-shadow: inset 0 -1px 0 currentcolor;
+.entry-content a:not(.wp-block-button__link) {
+	box-shadow: inset 0 -1px 0 currentColor;
 	text-decoration: none;
 
 	&:focus {
@@ -19,6 +19,6 @@ a {
 
 	&:hover,
 	&:focus {
-		box-shadow: inset 0 0 0 currentcolor, 0 3px 0 currentcolor;
+		box-shadow: inset 0 0 0 currentColor, 0 3px 0 currentColor;
 	}
 }

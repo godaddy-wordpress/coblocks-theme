@@ -23,7 +23,7 @@ if ( ! function_exists( 'coblocks_night_toggle' ) ) :
 		if ( $night || is_customize_preview() ) {
 			?>
 			<button id="night-mode-toggle" class="site-header__button header__button--night-mode button--chromeless<?php echo esc_attr( $visibility ); ?>" role="switch" aria-checked="false" aria-label="<?php esc_attr_e( 'Toggle Night Mode', '@@textdomain' ); ?>">
-				<?php echo wp_kses( coblocks_get_svg( array( 'icon' => 'night' ) ), coblocks_svg_allowed_html() ); ?>
+				<?php echo coblocks_get_icon_svg( 'night', 30 ); ?>
 				<span class="screen-reader-text"><?php echo esc_html_x( 'Settings', 'settings button', '@@textdomain' ); ?></span>
 			</button>
 			<?php
@@ -69,7 +69,7 @@ if ( ! function_exists( 'coblocks_search_toggle' ) ) :
 		if ( $search || is_customize_preview() ) {
 			?>
 			<button id="search-toggle" type="submit" class="button--chromeless search-toggle search-submit <?php echo esc_attr( $search_visibility ); ?>">
-				<?php echo wp_kses( coblocks_get_svg( array( 'icon' => 'search' ) ), coblocks_svg_allowed_html() ); ?>
+				<?php echo coblocks_get_icon_svg( 'search', 25 ); ?>
 				<span class="screen-reader-text"><?php echo esc_html_x( 'Search', 'submit button', '@@textdomain' ); ?></span>
 			</button>
 		<?php
@@ -130,13 +130,13 @@ if ( ! function_exists( 'coblocks_posted_on' ) ) :
 
 		// Check for link post format and output a link icon if it is one.
 		$link        = get_post_meta( get_the_ID(), '_coblocks_link', true );
-		$format_icon = ( has_post_format( 'link' ) && $link ) ? coblocks_get_svg( array( 'icon' => 'chain' ) ) : null;
+		$format_icon = ( has_post_format( 'link' ) && $link ) ? coblocks_get_icon_svg( 'chain', 26 ) : null;
 
 		// Add a sticky icon, if it's necessary.
-		$sticky_icon = ( is_sticky() && is_home() ) ? coblocks_get_svg( array( 'icon' => 'thumb-tack' ) ) : null;
+		$sticky_icon = ( is_sticky() && is_home() ) ? coblocks_get_icon_svg( 'thumb-tack', 26 ) : null;
 
 		// Add a lock icon, if it's necessary.
-		$password_icon = ( post_password_required() && is_home() ) ? coblocks_get_svg( array( 'icon' => 'lock' ) ) : null;
+		$password_icon = ( post_password_required() && is_home() ) ? coblocks_get_icon_svg( 'lock', 26 ) : null;
 
 		// Get the author name; wrap it in a link.
 		$byline = sprintf(

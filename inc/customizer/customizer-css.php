@@ -104,7 +104,7 @@ function coblocks_customizer_css() {
 		color: ' . esc_attr( $alt_heading_color ) . ';
 	}
 
-	body .search-toggle .icon, body .site-header .social-navigation svg, body .search-form .search-submit .icon {
+	body .search-toggle .svg-icon, body .site-header .social-navigation svg, body .search-form .search-submit .svg-icon {
 		fill: ' . esc_attr( $header_icon_color ) . ';
 	}
 
@@ -116,7 +116,7 @@ function coblocks_customizer_css() {
 		color: ' . esc_attr( $nav_color ) . ';
 	}
 
-	.main-navigation .dropdown-toggle .icon {
+	.main-navigation .dropdown-toggle .svg-icon {
 		fill: ' . esc_attr( $nav_color ) . ';
 	}
 

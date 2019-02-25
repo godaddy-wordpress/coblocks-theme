@@ -44,10 +44,10 @@
 							wp_nav_menu(
 								array(
 									'theme_location' => 'social',
-									'menu_class'     => 'sans-serif-font medium smooth gray h6 list-reset',
+									'menu_class'     => 'sans-serif-font medium smooth gray h6 flex items-center list-reset',
 									'depth'          => 1,
 									'link_before'    => '<span class="screen-reader-text">',
-									'link_after'     => '</span>' . coblocks_get_svg( array( 'icon' => 'chain' ) ),
+									'link_after'     => '</span>' . coblocks_get_icon_svg( 'chain', 22 ),
 								)
 							);
 						?>

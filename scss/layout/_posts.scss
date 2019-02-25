@@ -53,10 +53,8 @@ body:not(.single) article.page {
 		animation: bounce 2s infinite;
 	}
 
-	.icon {
+	.svg-icon {
 		animation: bounce 2s infinite;
-		height: 12px;
-		width: 20px;
 		fill: $gray;
 		position: relative;
 		top: 1px;
@@ -89,12 +87,10 @@ body:not(.single) article.page {
 		@include hide;
 	}
 
-	.icon {
+	.svg-icon {
 		display: inline-block;
 		fill: currentColor;
 		position: relative;
-		height: 26px;
-		width: 26px;
 		top: 5px;
 		margin-right: 5px;
 	}

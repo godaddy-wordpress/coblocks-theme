@@ -24,7 +24,7 @@
 	&__button {
 		padding: 5px;
 
-		.icon {
+		.svg-icon {
 			backface-visibility: hidden;
 			fill: $black;
 			position: relative;
@@ -34,12 +34,6 @@
 				&:hover {
 					opacity: 0.7;
 				}
-			}
-
-			&-night {
-				height: 30px;
-				top: 0.06em;
-				width: 30px;
 			}
 		}
 	}
@@ -125,7 +119,7 @@
 				opacity: .7;
 			}
 
-			&.current_page_item .icon {
+			&.current_page_item .svg-icon {
 				opacity: .7;
 			}
 		}

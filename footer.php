@@ -21,7 +21,7 @@
 
 			<?php get_sidebar(); ?>
 
-			<div class="site-info container center-align h5 medium sans-serif-font gray" role="contentinfo">
+			<div class="site-info container center-align h6 medium sans-serif-font gray" role="contentinfo">
 
 				<span class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></a>
@@ -42,7 +42,7 @@
 					wp_nav_menu(
 						array(
 							'theme_location' => 'footer',
-							'menu_class'     => 'footer-menu sans-serif-font medium gray h5 list-reset',
+							'menu_class'     => 'footer-menu sans-serif-font medium gray h6 list-reset',
 							'depth'          => '1',
 						)
 					);
