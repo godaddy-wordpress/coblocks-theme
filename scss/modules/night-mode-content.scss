@@ -13,6 +13,7 @@ input,
 select,
 textarea,
 .gray,
+.site-header .nav li a,
 .wp-caption-text,
 .blockquote,
 label,
@@ -126,7 +127,9 @@ body .widget-area__wrapper {
 	}
 }
 
-.main-navigation ul:not(.sub-menu) a {
+.main-navigation ul:not(.sub-menu) a:hover,
+.site-info a:hover,
+.footer-menu li a:hover {
 	color: $night_mode_heading;
 }
 

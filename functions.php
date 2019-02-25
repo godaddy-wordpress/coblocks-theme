@@ -129,7 +129,7 @@ function coblocks_setup() {
 			array(
 				'name'  => esc_html__( 'Nevada', '@@textdomain' ),
 				'slug'  => 'third',
-				'color' => '#656e79',
+				'color' => '#565d67',
 			),
 			array(
 				'name'  => esc_html__( 'Mantatee', '@@textdomain' ),

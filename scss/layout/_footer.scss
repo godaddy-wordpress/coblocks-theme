@@ -33,7 +33,7 @@
 	}
 
 	.footer-navigation {
-		padding: 1.3em 0 0;
+		padding: 0.75em 0 0;
 	}
 
 	.footer-menu {
@@ -45,6 +45,12 @@
 			@media only screen and (min-width: 400px) {
 				display: inline-block;
 				margin: 0 5px;
+			}
+
+			@include hover {
+				a:hover {
+					color: $black;
+				}
 			}
 		}
 	}
@@ -103,6 +109,12 @@
 
 	.site-theme {
 		display: block;
-		margin-top: 0.75em;
+		margin-top: 1em;
+	}
+
+	@include hover {
+		a:hover {
+			color: $black;
+		}
 	}
 }

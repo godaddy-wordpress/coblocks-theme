@@ -27,14 +27,14 @@ function coblocks_defaults( $name ) {
 				'custom_logo_border_radius'    => true,
 
 				// Colors.
-				'heading_color'                => '#2a2a2a',
-				'alt_heading_color'            => '#656e79',
-				'text_color'                   => '#2a2a2a',
-				'header_icon_color'            => '#2a2a2a',
-				'nav_color'                    => '#656e79',
-				'mobile_nav_color'             => '#2a2a2a',
+				'heading_color'                => '#191521',
+				'alt_heading_color'            => '#565d67',
+				'text_color'                   => '#191521',
+				'header_icon_color'            => '#191521',
+				'nav_color'                    => '#565d67',
+				'mobile_nav_color'             => '#191521',
 				'footer_bg_color'              => '#f1f1f1',
-				'footer_text_color'            => '#2a2a2a',
+				'footer_text_color'            => '#191521',
 
 				// Options.
 				'header_search'                => true,

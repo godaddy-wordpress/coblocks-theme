@@ -160,7 +160,7 @@ if ( ! function_exists( 'coblocks_posted_on' ) ) :
 		);
 
 		// Finally, let's write all of this to the page.
-		echo '<div class="entry-meta h5 medium sans-serif-font gray">' . wp_kses( $password_icon, coblocks_svg_allowed_html() ), wp_kses( $sticky_icon, coblocks_svg_allowed_html() ), wp_kses( $format_icon, coblocks_svg_allowed_html() ) . '<span class="posted-on">' . wp_kses( coblocks_time_link(), $allowed_html ) . '</span><span class="byline ' . esc_attr( $author_visibility ) . '"> ' . wp_kses( $byline, $allowed_html ) . '</span></div>';
+		echo '<div class="entry-meta h6 medium sans-serif-font gray">' . wp_kses( $password_icon, coblocks_svg_allowed_html() ), wp_kses( $sticky_icon, coblocks_svg_allowed_html() ), wp_kses( $format_icon, coblocks_svg_allowed_html() ) . '<span class="posted-on">' . wp_kses( coblocks_time_link(), $allowed_html ) . '</span><span class="byline ' . esc_attr( $author_visibility ) . '"> ' . wp_kses( $byline, $allowed_html ) . '</span></div>';
 
 	}
 endif;
