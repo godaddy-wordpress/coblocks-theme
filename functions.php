@@ -117,14 +117,14 @@ function coblocks_setup() {
 	add_theme_support(
 		'editor-color-palette', array(
 			array(
-				'name'  => esc_html__( 'Jungle Black', '@@textdomain' ),
+				'name'  => esc_html__( 'Vulcan', '@@textdomain' ),
 				'slug'  => 'first',
-				'color' => '#1d1d1d',
+				'color' => '#191521',
 			),
 			array(
-				'name'  => esc_html__( 'Charcoal', '@@textdomain' ),
+				'name'  => esc_html__( 'Marlin', '@@textdomain' ),
 				'slug'  => 'second',
-				'color' => '#454545',
+				'color' => '#363b40',
 			),
 			array(
 				'name'  => esc_html__( 'Nevada', '@@textdomain' ),
@@ -147,24 +147,24 @@ function coblocks_setup() {
 				'color' => '#ffffff',
 			),
 			array(
-				'name'  => esc_html__( 'Egyptian Blue', '@@textdomain' ),
+				'name'  => esc_html__( 'Torea Bay', '@@textdomain' ),
 				'slug'  => 'seventh',
-				'color' => '#152ab0',
+				'color' => '#1e35b9',
 			),
 			array(
-				'name'  => esc_html__( 'Lavender Indigo', '@@textdomain' ),
+				'name'  => esc_html__( 'Glitter', '@@textdomain' ),
 				'slug'  => 'eigth',
-				'color' => '#974AFC',
+				'color' => '#E7E9FB',
 			),
 			array(
-				'name'  => esc_html__( 'Shamrock', '@@textdomain' ),
+				'name'  => esc_html__( 'Peppermint', '@@textdomain' ),
 				'slug'  => 'nineth',
-				'color' => '#2ed1a3',
+				'color' => '#d0eac4',
 			),
 			array(
-				'name'  => esc_html__( 'Supernova', '@@textdomain' ),
+				'name'  => esc_html__( 'Pipi', '@@textdomain' ),
 				'slug'  => 'tenth',
-				'color' => '#FFC900',
+				'color' => '#fbf3d6',
 			),
 		)
 	);
