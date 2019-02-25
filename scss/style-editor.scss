@@ -602,20 +602,20 @@ blockquote,
 	&.is-style-outline:hover,
 	&.is-style-outline:focus,
 	&.is-style-outline:active {
-		background: transparent;
+		background: transparent !important;
 		color: $black;
 
 		.wp-block-button__link {
 
 			&:not(.has-background) {
-				background: transparent;
+				background: transparent !important;
 			}
-
-			// &:not(.has-text-color) {
-			// 	color: #fff;
-			// }
 		}
 	}
+}
+
+.is-style-outline .wp-block-button__link {
+	background: transparent !important;
 }
 
 /** === List === */
