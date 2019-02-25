@@ -572,43 +572,50 @@ blockquote,
 /** === Button === */
 .wp-block-button {
 
+	.wp-block-button__link {
+		@include fluid-type(600px, 1200px, 17px, 19px);
+		line-height: 24px;
+		font-weight: 500;
+		font-family: $font__heading;
+		font-size: 18px;
+		padding: 14px 30px 13px;
+		box-shadow: none !important;
+		transition: background 200ms cubic-bezier(0.645, 0.045, 0.355, 1), border 200ms cubic-bezier(0.645, 0.045, 0.355, 1), color 200ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+		&:not(.has-background) {
+			background-color: $black;
+		}
+
+		&:not(.has-text-color) {
+			color: #fff;
+		}
+	}
+
+	&:not(.is-style-squared) .wp-block-button__link {
+		border-radius: 5px;
+	}
+
+	&.is-style-outline .wp-block-button__link {
+		padding-top: 12px;
+		padding-bottom: 11px;
+	}
+
 	&.is-style-outline .wp-block-button__link,
-	&.is-style-outline .wp-block-button__link:hover,
 	&.is-style-outline .wp-block-button__link:focus,
 	&.is-style-outline .wp-block-button__link:active {
-		background: transparent !important;
-	}
+		border-width: 2px;
+		border-style: solid;
 
-	&.is-style-squared .wp-block-button__link {
-		border-radius: 0;
-	}
+		&:not(.has-background) {
+			background: transparent;
+		}
 
-	.wp-block-button__link {
-		line-height: 24px;
-	}
-}
-
-.wp-block-button__link {
-	@include fluid-type(600px, 1200px, 17px, 19px);
-	border-radius: 30px;
-	font-weight: 500;
-	font-family: $font__heading;
-	font-size: 18px;
-	padding: 14px 30px 13px;
-	box-shadow: none !important;
-	transition: background 200ms cubic-bezier(0.645, 0.045, 0.355, 1), border 200ms cubic-bezier(0.645, 0.045, 0.355, 1), color 200ms cubic-bezier(0.645, 0.045, 0.355, 1), opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1);
-
-	&:not(.has-background) {
-
-		&,
-		&:hover,
-		&:active,
-		&:focus {
-			background-color: $black;
+		&:not(.has-text-color) {
+			color: $black;
+			border-color: currentColor;
 		}
 	}
 }
-
 
 /** === List === */
 
