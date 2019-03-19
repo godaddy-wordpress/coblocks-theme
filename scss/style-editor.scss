@@ -966,16 +966,20 @@ ul.wp-block-categories__list {
 .wp-block-coblocks-alert {
 	padding: 0.8em 1em 0.7em;
 
+	&__text,
 	&__title {
-		font-size: 19px;
 		margin-bottom: 0;
 		margin-top: 0;
 	}
+}
 
-	&__text {
+.wp-block[data-type="coblocks/alert"] {
+	&:not([data-custom-fontsize="1"]) &__title {
+		font-size: 19px;
+	}
+
+	&:not([data-custom-fontsize="1"]) &__text {
 		font-size: 18px;
-		margin-bottom: 0;
-		margin-top: 0;
 	}
 }
 

@@ -4,14 +4,16 @@
 		padding-bottom: 0.8em;
 		padding-top: 0.7em;
 
-		&__title {
+		&:not(.has-custom-size) &__title {
 			font-size: 19px;
-			margin-bottom: 0;
-			margin-top: 0;
 		}
 
-		&__text {
+		&:not(.has-custom-size) &__text {
 			font-size: 18px;
+		}
+
+		&__text,
+		&__title {
 			margin-bottom: 0;
 			margin-top: 0;
 		}
