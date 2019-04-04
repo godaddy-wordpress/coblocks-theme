@@ -78,6 +78,7 @@ License: GPLv2 or later
 
 = 1.2.5 =
 * Fix: Adjust Alert block typography control functionality
+* Tweak: Add proper styling for the new <code> format within the block editor
 
 = 1.2.4 =
 * Tweak: Add minor style tweak for the Blubrry podcast player
