@@ -14,9 +14,9 @@ get_header(); ?>
 	<header class="page-header container center-align bottom-spacer">
 		<?php if ( have_posts() ) : ?>
 			<?php /* translators: 1: search query */ ?>
-			<h1 class="h2"><?php printf( esc_html__( 'Searching for: %s', '@@textdomain' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<h1 class="h2"><?php printf( esc_html__( 'Searching for: %s', 'coblocks' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		<?php else : ?>
-			<h1 class="h2"><?php esc_html_e( 'Nothing Found', '@@textdomain' ); ?></h1>
+			<h1 class="h2"><?php esc_html_e( 'Nothing Found', 'coblocks' ); ?></h1>
 		<?php endif; ?>
 	</header>
 
@@ -38,9 +38,9 @@ get_header(); ?>
 
 		the_posts_pagination(
 			array(
-				'prev_text'          => coblocks_get_icon_svg( 'chevron_left', 40 ) . '<span class="screen-reader-text">' . __( 'Previous', '@@textdomain' ) . '</span>',
-				'next_text'          => '<span class="screen-reader-text">' . __( 'Next', '@@textdomain' ) . '</span>' . coblocks_get_icon_svg( 'chevron_right', 22 ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', '@@textdomain' ) . ' </span>',
+				'prev_text'          => coblocks_get_icon_svg( 'chevron_left', 40 ) . '<span class="screen-reader-text">' . __( 'Previous', 'coblocks' ) . '</span>',
+				'next_text'          => '<span class="screen-reader-text">' . __( 'Next', 'coblocks' ) . '</span>' . coblocks_get_icon_svg( 'chevron_right', 22 ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'coblocks' ) . ' </span>',
 			)
 		);
 
@@ -48,7 +48,7 @@ get_header(); ?>
 	?>
 
 		<div class="container--sml center-align">
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try searching again.', '@@textdomain' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try searching again.', 'coblocks' ); ?></p>
 			<?php get_search_form(); ?>
 		</div>
 

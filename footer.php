@@ -27,14 +27,14 @@
 
 				<span class="site-theme">
 					<?php /* translators: 1: theme, 2: designer */ ?>
-					<a href="https://coblocks.com/" class="powered-by-coblocks"><?php printf( esc_html__( 'Powered by %1$s', '@@textdomain' ), 'CoBlocks' ); ?></a>
+					<a href="https://coblocks.com/" class="powered-by-coblocks"><?php printf( esc_html__( 'Powered by %1$s', 'coblocks' ), 'CoBlocks' ); ?></a>
 				</span>
 
 			</div>
 
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
 
-				<nav class="footer-navigation container" aria-label="<?php esc_attr_e( 'Footer Menu', '@@textdomain' ); ?>">
+				<nav class="footer-navigation container" aria-label="<?php esc_attr_e( 'Footer Menu', 'coblocks' ); ?>">
 
 					<?php
 					wp_nav_menu(

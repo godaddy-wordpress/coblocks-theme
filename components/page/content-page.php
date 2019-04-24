@@ -39,7 +39,7 @@
 
 				wp_link_pages(
 					array(
-						'before' => '<div class="page-links">' . esc_html__( 'Pages:', '@@textdomain' ),
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'coblocks' ),
 						'after'  => '</div>',
 					)
 				);

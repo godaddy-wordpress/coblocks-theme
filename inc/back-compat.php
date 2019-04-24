@@ -29,7 +29,7 @@ add_action( 'after_switch_theme', 'coblocks_switch_theme' );
  */
 function coblocks_upgrade_notice() {
 	/* translators: WordPress version */
-	$message = sprintf( esc_html__( 'CoBlocks requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', '@@textdomain' ), $GLOBALS['wp_version'] );
+	$message = sprintf( esc_html__( 'CoBlocks requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'coblocks' ), $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', esc_html( $message ) );
 }
 
@@ -39,7 +39,7 @@ function coblocks_upgrade_notice() {
 function coblocks_customize() {
 	wp_die(
 		/* translators: WordPress version */
-		sprintf( esc_html__( 'CoBlocks requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', '@@textdomain' ), esc_html( $GLOBALS['wp_version'] ) ), '', array(
+		sprintf( esc_html__( 'CoBlocks requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'coblocks' ), esc_html( $GLOBALS['wp_version'] ) ), '', array(
 			'back_link' => true,
 		)
 	);
@@ -52,7 +52,7 @@ add_action( 'load-customize.php', 'coblocks_customize' );
 function coblocks_preview() {
 	if ( isset( $_GET['preview'] ) ) {
 		/* translators: WordPress version */
-		wp_die( sprintf( esc_html__( 'CoBlocks requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', '@@textdomain' ), esc_html( $GLOBALS['wp_version'] ) ) );
+		wp_die( sprintf( esc_html__( 'CoBlocks requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'coblocks' ), esc_html( $GLOBALS['wp_version'] ) ) );
 	}
 }
 add_action( 'template_redirect', 'coblocks_preview' );

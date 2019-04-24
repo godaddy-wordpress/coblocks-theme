@@ -38,7 +38,7 @@ function coblocks_alnp_post_divider() {
 	?>
 	<div class="alnp--read-more center-align">
 		<span id="alnp--read-more__text" class="display-inline-block sans-serif-font gray">
-			<?php echo esc_html( apply_filters( 'coblocks_post_up_next', esc_html__( 'Read my next article', '@@textdomain' ) ) ); ?>
+			<?php echo esc_html( apply_filters( 'coblocks_post_up_next', esc_html__( 'Read my next article', 'coblocks' ) ) ); ?>
 		</span>
 		<?php echo coblocks_get_icon_svg( 'arrow-down', 20 ); ?>
 	</div>

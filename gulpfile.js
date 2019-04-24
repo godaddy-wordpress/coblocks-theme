@@ -5,7 +5,7 @@ var project 			= project.replace(/_/g, " ");
 var slug			= pkg.slug;
 
 // Translation.
-var text_domain			= '@@textdomain';
+var text_domain			= 'coblocks';
 var destFile			= slug+'.pot';
 var packageName			= project;
 var bugReport			= pkg.author_uri;
