@@ -1,4 +1,4 @@
-# @@pkg.name #
+# CoBlocks #
 
 Contributors: richtabor, themebeans, coblocks
 Requires at least: 4.7

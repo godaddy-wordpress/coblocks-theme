@@ -273,9 +273,9 @@ function coblocks_setup() {
 	);
 
 	/**
-	 * Filters @@pkg.name array of starter content.
+	 * Filters CoBlocks array of starter content.
 	 *
-	 * @since @@pkg.name 1.0
+	 * @since CoBlocks 1.0
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */
