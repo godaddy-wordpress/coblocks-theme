@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"postcss": "^6.0.19",
-		"stylelint": "^9.1.1"
+		"stylelint": "^10.0.1"
 	},
 	"stylelint": {
 		"extends": "stylelint-config-wordpress/scss",
