@@ -3,9 +3,7 @@
  * Auto Load Next Post ompatibility File
  * See https://wordpress.org/plugins/auto-load-next-post/
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 if ( ! function_exists( 'coblocks_alnp_setup' ) ) :

@@ -2,9 +2,7 @@
 /**
  * Template for displaying search forms in CoBlocks
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>

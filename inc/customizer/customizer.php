@@ -2,9 +2,7 @@
 /**
  * Theme Customizer functionality
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**

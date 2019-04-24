@@ -4,9 +4,7 @@
  *
  * Contains the closing of the #page div and all content after
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 ?>

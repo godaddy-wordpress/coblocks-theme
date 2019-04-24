@@ -2,11 +2,7 @@
 /**
  * Theme upgrade control.
  *
- * @see https://github.com/justintadlock/trt-customizer-pro
- *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 // Exit if accessed directly.

@@ -2,11 +2,7 @@
 /**
  * Range Customizer Control.
  *
- * @see https://developer.wordpress.org/reference/classes/wp_customize_control/
- *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 // Exit if accessed directly.

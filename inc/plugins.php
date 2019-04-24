@@ -4,9 +4,7 @@
  *
  * Register the plugins for this theme.
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**

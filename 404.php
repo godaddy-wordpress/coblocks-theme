@@ -2,9 +2,7 @@
 /**
  * The template for displaying 404 pages (not found)
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 get_header(); ?>

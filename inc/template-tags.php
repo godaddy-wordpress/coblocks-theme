@@ -4,9 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 if ( ! function_exists( 'coblocks_night_toggle' ) ) :
