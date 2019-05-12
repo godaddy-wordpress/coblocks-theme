@@ -4,9 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**
@@ -28,9 +26,9 @@ function coblocks_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on CoBlocks, use a find and replace
-	 * to change '@@textdomain' to the name of your theme in all the template files
+	 * to change 'coblocks' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( '@@textdomain', get_parent_theme_file_path( '/languages' ) );
+	load_theme_textdomain( 'coblocks', get_parent_theme_file_path( '/languages' ) );
 
 	/*
 	 * Add default posts and comments RSS feed links to head.
@@ -73,9 +71,9 @@ function coblocks_setup() {
 	 */
 	register_nav_menus(
 		array(
-			'primary' => esc_html__( 'Primary Menu', '@@textdomain' ),
-			'footer'  => esc_html__( 'Footer Menu', '@@textdomain' ),
-			'social'  => esc_html__( 'Social Menu', '@@textdomain' ),
+			'primary' => esc_html__( 'Primary Menu', 'coblocks' ),
+			'footer'  => esc_html__( 'Footer Menu', 'coblocks' ),
+			'social'  => esc_html__( 'Social Menu', 'coblocks' ),
 		)
 	);
 
@@ -117,52 +115,52 @@ function coblocks_setup() {
 	add_theme_support(
 		'editor-color-palette', array(
 			array(
-				'name'  => esc_html__( 'Vulcan', '@@textdomain' ),
+				'name'  => esc_html__( 'Vulcan', 'coblocks' ),
 				'slug'  => 'first',
 				'color' => '#191521',
 			),
 			array(
-				'name'  => esc_html__( 'Marlin', '@@textdomain' ),
+				'name'  => esc_html__( 'Marlin', 'coblocks' ),
 				'slug'  => 'second',
 				'color' => '#363b40',
 			),
 			array(
-				'name'  => esc_html__( 'Nevada', '@@textdomain' ),
+				'name'  => esc_html__( 'Nevada', 'coblocks' ),
 				'slug'  => 'third',
 				'color' => '#565d67',
 			),
 			array(
-				'name'  => esc_html__( 'Mantatee', '@@textdomain' ),
+				'name'  => esc_html__( 'Mantatee', 'coblocks' ),
 				'slug'  => 'fourth',
 				'color' => '#8f949e',
 			),
 			array(
-				'name'  => esc_html__( 'Desert Storm', '@@textdomain' ),
+				'name'  => esc_html__( 'Desert Storm', 'coblocks' ),
 				'slug'  => 'fifth',
 				'color' => '#f5f5f5',
 			),
 			array(
-				'name'  => esc_html__( 'White', '@@textdomain' ),
+				'name'  => esc_html__( 'White', 'coblocks' ),
 				'slug'  => 'sixth',
 				'color' => '#ffffff',
 			),
 			array(
-				'name'  => esc_html__( 'Torea Bay', '@@textdomain' ),
+				'name'  => esc_html__( 'Torea Bay', 'coblocks' ),
 				'slug'  => 'seventh',
 				'color' => '#1e35b9',
 			),
 			array(
-				'name'  => esc_html__( 'Glitter', '@@textdomain' ),
+				'name'  => esc_html__( 'Glitter', 'coblocks' ),
 				'slug'  => 'eigth',
 				'color' => '#E7E9FB',
 			),
 			array(
-				'name'  => esc_html__( 'Peppermint', '@@textdomain' ),
+				'name'  => esc_html__( 'Peppermint', 'coblocks' ),
 				'slug'  => 'nineth',
 				'color' => '#d0eac4',
 			),
 			array(
-				'name'  => esc_html__( 'Pipi', '@@textdomain' ),
+				'name'  => esc_html__( 'Pipi', 'coblocks' ),
 				'slug'  => 'tenth',
 				'color' => '#fbf3d6',
 			),
@@ -177,26 +175,26 @@ function coblocks_setup() {
 	add_theme_support(
 		'editor-font-sizes', array(
 			array(
-				'name'      => esc_html__( 'Small', '@@textdomain' ),
-				'shortName' => esc_html__( 'S', '@@textdomain' ),
+				'name'      => esc_html__( 'Small', 'coblocks' ),
+				'shortName' => esc_html__( 'S', 'coblocks' ),
 				'size'      => 16,
 				'slug'      => 'small',
 			),
 			array(
-				'name'      => esc_html__( 'Regular', '@@textdomain' ),
-				'shortName' => esc_html__( 'M', '@@textdomain' ),
+				'name'      => esc_html__( 'Regular', 'coblocks' ),
+				'shortName' => esc_html__( 'M', 'coblocks' ),
 				'size'      => 19,
 				'slug'      => 'regular',
 			),
 			array(
-				'name'      => esc_html__( 'Large', '@@textdomain' ),
-				'shortName' => esc_html__( 'L', '@@textdomain' ),
+				'name'      => esc_html__( 'Large', 'coblocks' ),
+				'shortName' => esc_html__( 'L', 'coblocks' ),
 				'size'      => 24,
 				'slug'      => 'large',
 			),
 			array(
-				'name'      => esc_html__( 'Huge', '@@textdomain' ),
-				'shortName' => esc_html__( 'XL', '@@textdomain' ),
+				'name'      => esc_html__( 'Huge', 'coblocks' ),
+				'shortName' => esc_html__( 'XL', 'coblocks' ),
 				'size'      => 32,
 				'slug'      => 'huge',
 			),
@@ -230,7 +228,7 @@ function coblocks_setup() {
 
 		'attachments' => array(
 			'image-logo' => array(
-				'post_title' => _x( 'Logo', 'Theme starter content', '@@textdomain' ),
+				'post_title' => _x( 'Logo', 'Theme starter content', 'coblocks' ),
 				'file'       => 'assets/images/logo.png',
 			),
 		),
@@ -238,7 +236,7 @@ function coblocks_setup() {
 		'theme_mods'  => array(
 			'show_on_front'         => 'page',
 			'page_for_posts'        => '{{blog}}',
-			'blogdescription'       => _x( 'CoBlocks, A beautiful Gutenberg WordPress theme', 'Theme starter content', '@@textdomain' ),
+			'blogdescription'       => _x( 'CoBlocks, A beautiful Gutenberg WordPress theme', 'Theme starter content', 'coblocks' ),
 			'custom_logo'           => '{{image-logo}}',
 			'custom_logo_max_width' => coblocks_defaults( 'custom_logo_max_width' ),
 		),
@@ -251,21 +249,21 @@ function coblocks_setup() {
 
 		'nav_menus'   => array(
 			'primary' => array(
-				'name'  => esc_html__( 'Primary Menu', '@@textdomain' ),
+				'name'  => esc_html__( 'Primary Menu', 'coblocks' ),
 				'items' => array(
 					'page_blog'    => array(
-						'title' => _x( 'Articles', 'Theme starter content', '@@textdomain' ),
+						'title' => _x( 'Articles', 'Theme starter content', 'coblocks' ),
 					),
 					'page_about'   => array(
-						'title' => _x( 'About', 'Theme starter content', '@@textdomain' ),
+						'title' => _x( 'About', 'Theme starter content', 'coblocks' ),
 					),
 					'page_contact' => array(
-						'title' => _x( 'Contact', 'Theme starter content', '@@textdomain' ),
+						'title' => _x( 'Contact', 'Theme starter content', 'coblocks' ),
 					),
 				),
 			),
 			'social'  => array(
-				'name'  => esc_html__( 'Social Menu', '@@textdomain' ),
+				'name'  => esc_html__( 'Social Menu', 'coblocks' ),
 				'items' => array(
 					'link_twitter',
 					'link_instagram',
@@ -275,9 +273,9 @@ function coblocks_setup() {
 	);
 
 	/**
-	 * Filters @@pkg.name array of starter content.
+	 * Filters CoBlocks array of starter content.
 	 *
-	 * @since @@pkg.name 1.0
+	 * @since CoBlocks 1.0
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */
@@ -295,9 +293,9 @@ add_action( 'after_setup_theme', 'coblocks_setup' );
 function coblocks_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer', '@@textdomain' ),
+			'name'          => esc_html__( 'Footer', 'coblocks' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Appears in the site footer.', '@@textdomain' ),
+			'description'   => esc_html__( 'Appears in the site footer.', 'coblocks' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h6 class="h2">',
@@ -328,8 +326,8 @@ function coblocks_scripts() {
 	}
 
 	// Translations in the custom functions.
-	$coblocks_l10n['expand']   = __( 'Expand child menu', '@@textdomain' );
-	$coblocks_l10n['collapse'] = __( 'Collapse child menu', '@@textdomain' );
+	$coblocks_l10n['expand']   = __( 'Expand child menu', 'coblocks' );
+	$coblocks_l10n['collapse'] = __( 'Collapse child menu', 'coblocks' );
 	// $coblocks_l10n['icon']     = coblocks_get_svg(
 	// array(
 	// 'icon'     => 'down',
@@ -395,14 +393,14 @@ function coblocks_fonts_url() {
 	 * supported by Heebo, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$heebo = esc_html_x( 'on', 'Heebo font: on or off', '@@textdomain' );
+	$heebo = esc_html_x( 'on', 'Heebo font: on or off', 'coblocks' );
 
 	/*
 	 * Translators: If there are characters in your language that are not
 	 * supported by Lora, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$lora = esc_html_x( 'on', 'Lora font: on or off', '@@textdomain' );
+	$lora = esc_html_x( 'on', 'Lora font: on or off', 'coblocks' );
 
 	if ( 'off' !== $heebo || 'off' !== $lora ) {
 		$font_families = array();

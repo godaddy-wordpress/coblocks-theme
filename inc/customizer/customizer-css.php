@@ -2,9 +2,7 @@
 /**
  * Enqueues front-end CSS for Customizer options.
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**

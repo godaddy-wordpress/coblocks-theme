@@ -11,24 +11,22 @@
 	"author_shop": "CoBlocks",
 	"license": "GPL-3.0",
 	"devDependencies": {
-		"browser-sync": "^2.11.1",
+		"browser-sync": "^2.26.4",
 		"del": "^3.0.0",
 		"gulp": "^4.0.0",
 		"gulp-autoprefixer": "^5.0.0",
 		"gulp-cache": "^1.0.2",
 		"gulp-concat": "^2.5.2",
-		"gulp-copy": "^1.0.1",
+		"gulp-copy": "^4.0.1",
 		"gulp-filter": "^4.0.0",
 		"gulp-hub": "^4.2.0",
 		"gulp-if": "^2.0.2",
-		"gulp-imagemin": "^2.4.0",
 		"gulp-line-ending-corrector": "^1.0.1",
 		"gulp-merge-media-queries": "^0.2.1",
 		"gulp-notify": "^3.2.0",
-		"gulp-open": "^2.0.0",
 		"gulp-rename": "^1.2.0",
 		"gulp-replace-task": "^0.11.0",
-		"gulp-sass": "^3.2.1",
+		"gulp-sass": "^4.0.2",
 		"gulp-sort": "^2.0.0",
 		"gulp-sourcemaps": "^1.5.2",
 		"gulp-uglify": "^1.5.3",
@@ -40,7 +38,7 @@
 	},
 	"dependencies": {
 		"postcss": "^6.0.19",
-		"stylelint": "^9.1.1"
+		"stylelint": "^10.0.1"
 	},
 	"stylelint": {
 		"extends": "stylelint-config-wordpress/scss",

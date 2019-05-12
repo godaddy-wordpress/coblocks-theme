@@ -4,9 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 if ( ! function_exists( 'coblocks_night_toggle' ) ) :
@@ -22,9 +20,9 @@ if ( ! function_exists( 'coblocks_night_toggle' ) ) :
 
 		if ( $night || is_customize_preview() ) {
 			?>
-			<button id="night-mode-toggle" class="site-header__button header__button--night-mode button--chromeless<?php echo esc_attr( $visibility ); ?>" role="switch" aria-checked="false" aria-label="<?php esc_attr_e( 'Toggle Night Mode', '@@textdomain' ); ?>">
+			<button id="night-mode-toggle" class="site-header__button header__button--night-mode button--chromeless<?php echo esc_attr( $visibility ); ?>" role="switch" aria-checked="false" aria-label="<?php esc_attr_e( 'Toggle Night Mode', 'coblocks' ); ?>">
 				<?php echo coblocks_get_icon_svg( 'night', 30 ); ?>
-				<span class="screen-reader-text"><?php echo esc_html_x( 'Settings', 'settings button', '@@textdomain' ); ?></span>
+				<span class="screen-reader-text"><?php echo esc_html_x( 'Settings', 'settings button', 'coblocks' ); ?></span>
 			</button>
 			<?php
 		}
@@ -70,7 +68,7 @@ if ( ! function_exists( 'coblocks_search_toggle' ) ) :
 			?>
 			<button id="search-toggle" type="submit" class="button--chromeless search-toggle search-submit <?php echo esc_attr( $search_visibility ); ?>">
 				<?php echo coblocks_get_icon_svg( 'search', 25 ); ?>
-				<span class="screen-reader-text"><?php echo esc_html_x( 'Search', 'submit button', '@@textdomain' ); ?></span>
+				<span class="screen-reader-text"><?php echo esc_html_x( 'Search', 'submit button', 'coblocks' ); ?></span>
 			</button>
 		<?php
 		}
@@ -141,7 +139,7 @@ if ( ! function_exists( 'coblocks_posted_on' ) ) :
 		// Get the author name; wrap it in a link.
 		$byline = sprintf(
 			/* translators: %s: post author */
-			'<span>' . __( 'by %s', '@@textdomain' ) . '</span>',
+			'<span>' . __( 'by %s', 'coblocks' ) . '</span>',
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
 		);
 
@@ -185,13 +183,13 @@ if ( ! function_exists( 'coblocks_time_link' ) ) :
 			get_the_date(),
 			get_the_modified_date( DATE_W3C ),
 			get_the_modified_date(),
-			apply_filters( 'coblocks_post_meta_updated_text', esc_html__( 'Published', '@@textdomain' ) )
+			apply_filters( 'coblocks_post_meta_updated_text', esc_html__( 'Published', 'coblocks' ) )
 		);
 
 		// Wrap the time string in a link, and preface it with 'Posted on'.
 		return sprintf(
 			/* translators: %s: post date */
-			__( '<span class="screen-reader-text">Posted on</span> %s', '@@textdomain' ),
+			__( '<span class="screen-reader-text">Posted on</span> %s', 'coblocks' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 	}

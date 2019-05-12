@@ -7,9 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /*
@@ -34,7 +32,7 @@ if ( post_password_required() ) {
 				$comments_number = get_comments_number();
 				if ( '1' === $comments_number ) {
 					/* translators: %s: post title */
-					printf( _x( 'One reply to &ldquo;%s&rdquo;', 'comments title', '@@textdomain' ), get_the_title() );
+					printf( _x( 'One reply to &ldquo;%s&rdquo;', 'comments title', 'coblocks' ), get_the_title() );
 				} else {
 					printf(
 						/* translators: 1: number of comments, 2: post title */
@@ -43,7 +41,7 @@ if ( post_password_required() ) {
 							'%1$s replies to &ldquo;%2$s&rdquo;',
 							$comments_number,
 							'comments title',
-							'@@textdomain'
+							'coblocks'
 						),
 						number_format_i18n( $comments_number ),
 						get_the_title()
@@ -67,8 +65,8 @@ if ( post_password_required() ) {
 			<?php
 			the_comments_pagination(
 				array(
-					'prev_text' => coblocks_get_icon_svg( 'chevron_left', 40 ) . '<span class="screen-reader-text">' . __( 'Previous', '@@textdomain' ) . '</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next', '@@textdomain' ) . '</span>' . coblocks_get_icon_svg( 'chevron_right', 22 ),
+					'prev_text' => coblocks_get_icon_svg( 'chevron_left', 40 ) . '<span class="screen-reader-text">' . __( 'Previous', 'coblocks' ) . '</span>',
+					'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'coblocks' ) . '</span>' . coblocks_get_icon_svg( 'chevron_right', 22 ),
 				)
 			);
 
@@ -79,7 +77,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', '@@textdomain' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'coblocks' ); ?></p>
 		<?php
 		endif;
 		?>

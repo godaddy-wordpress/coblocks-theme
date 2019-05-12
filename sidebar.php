@@ -4,9 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

@@ -2,9 +2,7 @@
 /**
  * SVG icons related functions and filters
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**

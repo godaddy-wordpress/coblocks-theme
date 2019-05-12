@@ -2,11 +2,7 @@
 /**
  * Add customizer colors to the block editor.
  *
- * @package     @@pkg.name
- * @link        @@pkg.theme_uri
- * @author      @@pkg.author
- * @copyright   @@pkg.copyright
- * @license     @@pkg.license
+ * @package     CoBlocks
  */
 
 /**

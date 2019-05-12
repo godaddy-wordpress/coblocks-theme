@@ -4,9 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 ?><!DOCTYPE html>
@@ -22,7 +20,7 @@
 
 <div id="page" class="site">
 
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '@@textdomain' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'coblocks' ); ?></a>
 
 	<?php do_action( 'coblocks_before_header' ); ?>
 
@@ -38,7 +36,7 @@
 
 					<span class="sep"></span>
 
-					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Menu', '@@textdomain' ); ?>">
+					<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Menu', 'coblocks' ); ?>">
 
 						<?php
 							wp_nav_menu(
@@ -61,11 +59,11 @@
 
 				<?php do_action( 'coblocks_before_nav' ); ?>
 
-				<nav id="site-navigation" class="main-navigation nav primary flex items-center justify-end" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', '@@textdomain' ); ?>">
+				<nav id="site-navigation" class="main-navigation nav primary flex items-center justify-end" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'coblocks' ); ?>">
 
 					<?php if ( has_nav_menu( 'primary' ) ) : ?>
 						<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">
-							<span class="screen-reader-text"><?php echo esc_html__( 'Menu', '@@textdomain' ); ?></span>
+							<span class="screen-reader-text"><?php echo esc_html__( 'Menu', 'coblocks' ); ?></span>
 						</button>
 
 						<?php

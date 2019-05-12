@@ -4,9 +4,7 @@
  *
  * Register the plugins for this theme.
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**
@@ -26,17 +24,17 @@ function coblocks_register_required_plugins() {
 	 */
 	$plugins = array(
 		array(
-			'name'     => esc_html__( 'CoBlocks', '@@textdomain' ),
+			'name'     => esc_html__( 'CoBlocks', 'coblocks' ),
 			'slug'     => 'coblocks',
 			'required' => false,
 		),
 		array(
-			'name'     => esc_html__( 'Block Gallery', '@@textdomain' ),
+			'name'     => esc_html__( 'Block Gallery', 'coblocks' ),
 			'slug'     => 'block-gallery',
 			'required' => false,
 		),
 		array(
-			'name'     => esc_html__( 'Login Designer', '@@textdomain' ),
+			'name'     => esc_html__( 'Login Designer', 'coblocks' ),
 			'slug'     => 'login-designer',
 			'required' => false,
 		),

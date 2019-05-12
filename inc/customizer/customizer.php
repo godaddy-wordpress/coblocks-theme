@@ -2,9 +2,7 @@
 /**
  * Theme Customizer functionality
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**
@@ -58,8 +56,8 @@ function coblocks_customize_register( $wp_customize ) {
 			new CoBlocks_Upgrade_Control(
 				$wp_customize, 'theme_upgrade', array(
 					'type'     => 'upgrade-theme',
-					'title'    => esc_html__( 'Get the CoBlocks Plugin', '@@textdomain' ),
-					'pro_text' => esc_html__( 'Download', '@@textdomain' ),
+					'title'    => esc_html__( 'Get the CoBlocks Plugin', 'coblocks' ),
+					'pro_text' => esc_html__( 'Download', 'coblocks' ),
 					'pro_url'  => 'https://coblocks.com',
 					'priority' => 9999,
 				)
@@ -72,7 +70,7 @@ function coblocks_customize_register( $wp_customize ) {
 	 */
 	$wp_customize->add_section(
 		'coblocks_theme_options', array(
-			'title'    => esc_html__( 'Theme Options', '@@textdomain' ),
+			'title'    => esc_html__( 'Theme Options', 'coblocks' ),
 			'priority' => 30,
 		)
 	);
@@ -93,7 +91,7 @@ function coblocks_customize_register( $wp_customize ) {
 			$wp_customize, 'custom_logo_max_width', array(
 				'default'     => coblocks_defaults( 'custom_logo_max_width' ),
 				'type'        => 'coblocks-range',
-				'label'       => esc_html__( 'Max Width', '@@textdomain' ),
+				'label'       => esc_html__( 'Max Width', 'coblocks' ),
 				'description' => 'px',
 				'section'     => 'title_tagline',
 				'priority'    => 8,
@@ -119,7 +117,7 @@ function coblocks_customize_register( $wp_customize ) {
 			$wp_customize, 'custom_logo_mobile_max_width', array(
 				'default'     => coblocks_defaults( 'custom_logo_max_width' ),
 				'type'        => 'coblocks-range',
-				'label'       => esc_html__( 'Mobile Max Width', '@@textdomain' ),
+				'label'       => esc_html__( 'Mobile Max Width', 'coblocks' ),
 				'description' => 'px',
 				'section'     => 'title_tagline',
 				'priority'    => 9,
@@ -144,7 +142,7 @@ function coblocks_customize_register( $wp_customize ) {
 		'custom_logo_border_radius',
 		array(
 			'type'     => 'checkbox',
-			'label'    => esc_html__( 'Border Radius', '@@textdomain' ),
+			'label'    => esc_html__( 'Border Radius', 'coblocks' ),
 			'section'  => 'title_tagline',
 			'priority' => 9,
 		)
@@ -162,7 +160,7 @@ function coblocks_customize_register( $wp_customize ) {
 		'site_title',
 		array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Display the Site Title and Logo', '@@textdomain' ),
+			'label'   => esc_html__( 'Display the Site Title and Logo', 'coblocks' ),
 			'section' => 'title_tagline',
 		)
 	);
@@ -179,8 +177,8 @@ function coblocks_customize_register( $wp_customize ) {
 		'header_search',
 		array(
 			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Header Search', '@@textdomain' ),
-			'description' => esc_html__( 'A site-wide searching element next to the header navigation.', '@@textdomain' ),
+			'label'       => esc_html__( 'Header Search', 'coblocks' ),
+			'description' => esc_html__( 'A site-wide searching element next to the header navigation.', 'coblocks' ),
 			'section'     => 'coblocks_theme_options',
 		)
 	);
@@ -197,8 +195,8 @@ function coblocks_customize_register( $wp_customize ) {
 		'night_mode',
 		array(
 			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Night Mode', '@@textdomain' ),
-			'description' => esc_html__( 'Enable for readers to view content easily while in the dark.', '@@textdomain' ),
+			'label'       => esc_html__( 'Night Mode', 'coblocks' ),
+			'description' => esc_html__( 'Enable for readers to view content easily while in the dark.', 'coblocks' ),
 			'section'     => 'coblocks_theme_options',
 		)
 	);
@@ -215,8 +213,8 @@ function coblocks_customize_register( $wp_customize ) {
 		'author_meta',
 		array(
 			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Author', '@@textdomain' ),
-			'description' => esc_html__( 'Add the post author metadata below the post title.', '@@textdomain' ),
+			'label'       => esc_html__( 'Author', 'coblocks' ),
+			'description' => esc_html__( 'Add the post author metadata below the post title.', 'coblocks' ),
 			'section'     => 'coblocks_theme_options',
 		)
 	);
@@ -233,8 +231,8 @@ function coblocks_customize_register( $wp_customize ) {
 		'categories',
 		array(
 			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Categories', '@@textdomain' ),
-			'description' => esc_html__( 'Enable or disable categories that display in the post footer.', '@@textdomain' ),
+			'label'       => esc_html__( 'Categories', 'coblocks' ),
+			'description' => esc_html__( 'Enable or disable categories that display in the post footer.', 'coblocks' ),
 			'section'     => 'coblocks_theme_options',
 		)
 	);
@@ -251,8 +249,8 @@ function coblocks_customize_register( $wp_customize ) {
 		'tags',
 		array(
 			'type'        => 'checkbox',
-			'label'       => esc_html__( 'Tags', '@@textdomain' ),
-			'description' => esc_html__( 'Enable or disable tags that display in the post footer.', '@@textdomain' ),
+			'label'       => esc_html__( 'Tags', 'coblocks' ),
+			'description' => esc_html__( 'Enable or disable tags that display in the post footer.', 'coblocks' ),
 			'section'     => 'coblocks_theme_options',
 		)
 	);
@@ -279,7 +277,7 @@ function coblocks_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize, 'heading_color', array(
-				'label'   => esc_html__( 'Heading Color', '@@textdomain' ),
+				'label'   => esc_html__( 'Heading Color', 'coblocks' ),
 				'section' => 'colors',
 			)
 		)
@@ -296,7 +294,7 @@ function coblocks_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize, 'alt_heading_color', array(
-				'label'   => esc_html__( 'Alt Heading Color', '@@textdomain' ),
+				'label'   => esc_html__( 'Alt Heading Color', 'coblocks' ),
 				'section' => 'colors',
 			)
 		)
@@ -313,7 +311,7 @@ function coblocks_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize, 'text_color', array(
-				'label'   => esc_html__( 'Text Color', '@@textdomain' ),
+				'label'   => esc_html__( 'Text Color', 'coblocks' ),
 				'section' => 'colors',
 			)
 		)
@@ -330,7 +328,7 @@ function coblocks_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize, 'header_icon_color', array(
-				'label'   => esc_html__( 'Header Icon Color', '@@textdomain' ),
+				'label'   => esc_html__( 'Header Icon Color', 'coblocks' ),
 				'section' => 'colors',
 			)
 		)
@@ -347,7 +345,7 @@ function coblocks_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize, 'nav_color', array(
-				'label'   => esc_html__( 'Navigation Color', '@@textdomain' ),
+				'label'   => esc_html__( 'Navigation Color', 'coblocks' ),
 				'section' => 'colors',
 			)
 		)
@@ -364,7 +362,7 @@ function coblocks_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize, 'mobile_nav_color', array(
-				'label'   => esc_html__( 'Mobile Navigation Color', '@@textdomain' ),
+				'label'   => esc_html__( 'Mobile Navigation Color', 'coblocks' ),
 				'section' => 'colors',
 			)
 		)
@@ -381,7 +379,7 @@ function coblocks_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize, 'footer_bg_color', array(
-				'label'   => esc_html__( 'Footer Background Color', '@@textdomain' ),
+				'label'   => esc_html__( 'Footer Background Color', 'coblocks' ),
 				'section' => 'colors',
 			)
 		)
@@ -398,7 +396,7 @@ function coblocks_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize, 'footer_text_color', array(
-				'label'   => esc_html__( 'Footer Text Color', '@@textdomain' ),
+				'label'   => esc_html__( 'Footer Text Color', 'coblocks' ),
 				'section' => 'colors',
 			)
 		)

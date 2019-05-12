@@ -2,13 +2,11 @@
 /**
  * Customizer defaults
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**
- * Get the default option for @@pkg.name's Customizer settings.
+ * Get the default option for CoBlocks's Customizer settings.
  *
  * @param  string|string $name Option key name to get.
  * @return mixin

@@ -9,9 +9,7 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 get_header();
@@ -40,9 +38,9 @@ if ( have_posts() ) :
 		 */
 		the_posts_pagination(
 			array(
-				'prev_text'          => coblocks_get_icon_svg( 'chevron_left', 40 ) . '<span class="screen-reader-text">' . __( 'Previous', '@@textdomain' ) . '</span>',
-				'next_text'          => '<span class="screen-reader-text">' . __( 'Next', '@@textdomain' ) . '</span>' . coblocks_get_icon_svg( 'chevron_right', 40 ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', '@@textdomain' ) . ' </span>',
+				'prev_text'          => coblocks_get_icon_svg( 'chevron_left', 40 ) . '<span class="screen-reader-text">' . __( 'Previous', 'coblocks' ) . '</span>',
+				'next_text'          => '<span class="screen-reader-text">' . __( 'Next', 'coblocks' ) . '</span>' . coblocks_get_icon_svg( 'chevron_right', 40 ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'coblocks' ) . ' </span>',
 			)
 		);
 	endif;

@@ -1,11 +1,8 @@
 <?php
 /**
  * Jetpack Compatibility File
- * See: http://jetpack.me/
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**
@@ -47,7 +44,7 @@ function coblocks_infinite_scroll() {
  */
 function coblocks_filter_jetpack_infinite_scroll_button_text( $settings ) {
 
-	$text = apply_filters( 'coblocks_infinite_scroll_button_text', esc_html__( 'Load More...', '@@textdomain' ) );
+	$text = apply_filters( 'coblocks_infinite_scroll_button_text', esc_html__( 'Load More...', 'coblocks' ) );
 
 	$settings['text'] = esc_html( $text );
 

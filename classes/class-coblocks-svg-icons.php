@@ -3,9 +3,7 @@
  * SVG Icons class
  * Based on the TwentyNineteen theme.
  *
- * @package     @@pkg.name
- * @author      @@pkg.author
- * @license     @@pkg.license
+ * @package CoBlocks
  */
 
 /**
