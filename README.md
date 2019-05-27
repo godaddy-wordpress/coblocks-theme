@@ -14,7 +14,7 @@
 2. Download and install the CoBlocks theme from the [WordPress plugin directory](https://wordpress.org/theme/coblocks/).
 
 ## Development ##
-1. Clone the GitHub repository: `https://github.com/thatplugincompany/coblocks-theme.git`
+1. Clone the GitHub repository: `https://github.com/godaddy/coblocks-theme.git`
 2. Browse to the folder in the command line.
 3. Run the `npm install` command to install the theme's dependencies within a /node_modules/ folder.
 4. Run the `default` gulp task for development.
